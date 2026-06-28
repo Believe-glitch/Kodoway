@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kodoway — Apprends à créer des sites web facilement</title>
+<meta name="description" content="Kodoway est une plateforme éducative en français pour apprendre le développement web (HTML, CSS, JavaScript) à ton rythme, avec des leçons et des exercices pratiques.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">🚀 KNOWLEDGE SHAPES THE MIND, PRACTICE SHAPES MASTERY</span>
+        <h1>Apprends à créer des sites web facilement</h1>
+        <p class="lead">Kodoway t'apprend HTML, CSS et JavaScript pas à pas, avec des leçons simples et des exercices pratiques. Aucune expérience requise.</p>
+        <div class="hero__actions">
+          <a href="html.html" class="btn btn-primary">Commencer →</a>
+          <a href="#cours" class="btn btn-ghost">Voir les cours</a>
+        </div>
+      </div>
+
+      <div class="code-window" aria-hidden="true">
+        <div class="code-window__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="code-window__title">premier-site.html</span>
+        </div>
+        <div class="code-window__body"><span class="ln">1</span><span class="punct">&lt;</span><span class="tag">h1</span><span class="punct">&gt;</span><span class="text-token">Bonjour le monde</span><span class="punct">&lt;/</span><span class="tag">h1</span><span class="punct">&gt;</span>
+<span class="ln">2</span><span class="punct">&lt;</span><span class="tag">p</span><span class="punct">&gt;</span><span class="text-token">Mon premier site avec Kodoway.</span><span class="punct">&lt;/</span><span class="tag">p</span><span class="punct">&gt;</span>
+<span class="ln">3</span><span class="punct">&lt;</span><span class="tag">button</span> <span class="attr">class</span><span class="punct">=</span><span class="str">"btn"</span><span class="punct">&gt;</span><span class="text-token">Suivant</span><span class="punct">&lt;/</span><span class="tag">button</span><span class="punct">&gt;</span><span class="cursor"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cours">
+    <div class="container">
+      <div class="section__head">
+        <h2>Trois langages, une seule plateforme</h2>
+        <p>Choisis un cours et avance à ton rythme, leçon après leçon.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon card__icon--html">&lt;/&gt;</div>
+          <h3>HTML</h3>
+          <p>La structure de toutes les pages web. Apprends les balises essentielles.</p>
+          <a href="html.html" class="card__link">Commencer le cours →</a>
+        </article>
+        <article class="card">
+          <div class="card__icon card__icon--css">{ }</div>
+          <h3>CSS</h3>
+          <p>Donne des couleurs, des formes et de la mise en page à ton site.</p>
+          <a href="css.html" class="card__link">Commencer le cours →</a>
+        </article>
+        <article class="card">
+          <div class="card__icon card__icon--js">JS</div>
+          <h3>JavaScript</h3>
+          <p>Ajoute de l'interactivité : boutons, animations, logique.</p>
+          <a href="javascript.html" class="card__link">Commencer le cours →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section__head">
+        <h2>Comment ça marche</h2>
+        <p>Une progression simple, pensée pour les débutants.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step__num">01</span>
+          <h3>Tu apprends</h3>
+          <p>Chaque leçon explique une notion avec des mots simples et des exemples concrets.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">02</span>
+          <h3>Tu pratiques</h3>
+          <p>Un exercice à la fin de chaque leçon pour t'entraîner immédiatement.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">03</span>
+          <h3>Tu progresses</h3>
+          <p>Ta progression est sauvegardée leçon après leçon, jusqu'au site complet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>
