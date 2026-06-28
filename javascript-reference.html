@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aide-mémoire JavaScript — Tout le vocabulaire | Kodoway</title>
+<meta name="description" content="Le vocabulaire JavaScript essentiel : variables, fonctions, conditions, boucles, DOM et événements, avec leur rôle et leurs cas particuliers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html" class="active">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+    <div class="lesson__head">
+      <p class="breadcrumb"><a href="javascript.html">Cours JavaScript</a> · Aide-mémoire</p>
+      <h1>Tout le vocabulaire JavaScript</h1>
+      <p class="lesson__intro">Un aide-mémoire avec les mots-clés et concepts les plus utiles en JavaScript, leur rôle, et quelques cas particuliers à connaître. Reviens ici quand tu en as besoin.</p>
+    </div>
+
+    <div class="lesson-content">
+
+      <h2>Variables et types</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">let nom = valeur;</code><p>Déclare une variable qui peut changer de valeur plus tard.</p></div>
+        <div class="ref-item"><code class="ref-tag">const nom = valeur;</code><p>Déclare une constante : sa valeur ne peut plus changer.</p><span class="ref-note">⚠️ Cas particulier : préfère toujours const, et utilise let seulement si tu sais que la valeur va changer.</span></div>
+        <div class="ref-item"><code class="ref-tag">"texte"</code><p>Une chaîne de caractères (string), entre guillemets simples ou doubles.</p></div>
+        <div class="ref-item"><code class="ref-tag">42</code><p>Un nombre (number), sans guillemets.</p></div>
+        <div class="ref-item"><code class="ref-tag">true / false</code><p>Un booléen (boolean) : vrai ou faux.</p></div>
+        <div class="ref-item"><code class="ref-tag">[1, 2, 3]</code><p>Un tableau (array) : une liste ordonnée de valeurs.</p></div>
+      </div>
+
+      <h2>Opérateurs</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">+ - * /</code><p>Addition, soustraction, multiplication, division.</p></div>
+        <div class="ref-item"><code class="ref-tag">===</code><p>Égalité stricte : vérifie si deux valeurs sont identiques (valeur et type).</p><span class="ref-note">⚠️ Cas particulier : évite == (sans le troisième égal), il peut donner des résultats surprenants.</span></div>
+        <div class="ref-item"><code class="ref-tag">!==</code><p>Différence stricte : vrai si les deux valeurs sont différentes.</p></div>
+        <div class="ref-item"><code class="ref-tag">&gt; &lt; &gt;= &lt;=</code><p>Comparaisons : plus grand, plus petit, plus grand ou égal, plus petit ou égal.</p></div>
+        <div class="ref-item"><code class="ref-tag">&& / ||</code><p>ET logique (les deux conditions vraies) / OU logique (au moins une vraie).</p></div>
+      </div>
+
+      <h2>Fonctions</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">function nom(param) { }</code><p>Déclare une fonction réutilisable, avec des paramètres entre parenthèses.</p></div>
+        <div class="ref-item"><code class="ref-tag">return valeur;</code><p>Renvoie un résultat depuis la fonction, et arrête son exécution.</p></div>
+        <div class="ref-item"><code class="ref-tag">nom(argument);</code><p>Appelle (exécute) la fonction avec une vraie valeur.</p></div>
+        <div class="ref-item"><code class="ref-tag">const f = () =&gt; { };</code><p>Une fonction fléchée : une autre façon d'écrire une fonction, plus courte.</p></div>
+      </div>
+
+      <h2>Conditions et boucles</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">if (condition) { }</code><p>Exécute le bloc seulement si la condition est vraie.</p></div>
+        <div class="ref-item"><code class="ref-tag">else if (...) { }</code><p>Teste une autre condition si la précédente était fausse.</p></div>
+        <div class="ref-item"><code class="ref-tag">else { }</code><p>Exécute ce bloc si aucune condition précédente n'était vraie.</p></div>
+        <div class="ref-item"><code class="ref-tag">for (let i = 0; i &lt; 5; i++) { }</code><p>Répète un bloc de code un nombre précis de fois.</p><span class="ref-note">⚠️ Cas particulier : attention aux boucles infinies si la condition n'est jamais fausse.</span></div>
+        <div class="ref-item"><code class="ref-tag">while (condition) { }</code><p>Répète un bloc tant que la condition reste vraie.</p></div>
+      </div>
+
+      <h2>Manipuler le DOM</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">document.querySelector('.classe')</code><p>Sélectionne le premier élément correspondant au sélecteur CSS donné.</p></div>
+        <div class="ref-item"><code class="ref-tag">document.querySelectorAll('.classe')</code><p>Sélectionne tous les éléments correspondants (sous forme de liste).</p></div>
+        <div class="ref-item"><code class="ref-tag">.textContent</code><p>Lit ou modifie le texte d'un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">.classList.add('x')</code><p>Ajoute une classe CSS à un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">.classList.remove('x')</code><p>Retire une classe CSS d'un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">.classList.toggle('x')</code><p>Ajoute la classe si absente, la retire si présente.</p></div>
+      </div>
+
+      <h2>Les événements</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">.addEventListener('click', fn)</code><p>Exécute la fonction fn quand l'élément est cliqué.</p></div>
+        <div class="ref-item"><code class="ref-tag">'input'</code><p>Événement déclenché à chaque frappe dans un champ de texte.</p></div>
+        <div class="ref-item"><code class="ref-tag">'submit'</code><p>Événement déclenché à l'envoi d'un formulaire.</p><span class="ref-note">⚠️ Cas particulier : pense à appeler event.preventDefault() pour empêcher le rechargement de la page.</span></div>
+        <div class="ref-item"><code class="ref-tag">console.log(valeur)</code><p>Affiche une valeur dans la console du navigateur, pratique pour vérifier ton code.</p></div>
+      </div>
+
+    </div>
+
+    <nav class="lesson-nav">
+      <span><a href="javascript.html" class="btn btn-ghost">← Retour à la leçon 1</a></span>
+      <span><a href="javascript-2.html" class="btn btn-primary">Passer à la leçon 2 →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

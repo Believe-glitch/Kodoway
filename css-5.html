@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours CSS — Leçon 5 : Le responsive design | Kodoway</title>
+<meta name="description" content="Apprends à adapter ton site aux mobiles avec les media queries en CSS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html" class="active">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+
+    <div class="lesson__head">
+      <p class="breadcrumb"><a href="css.html">Cours CSS</a> · Leçon 5</p>
+      <div class="progress-bar">
+        <div class="progress-bar__track"><div class="progress-bar__fill" style="width: 100%;"></div></div>
+        <span class="progress-bar__label">Leçon 5 / 5</span>
+      </div>
+      <h1>Le responsive design</h1>
+      <p class="lesson__intro">Ton site doit s'afficher correctement sur ordinateur, tablette et mobile, grâce aux media queries.</p>
+    </div>
+
+    <div class="lesson-content">
+      <h2>Les media queries</h2>
+      <p>Une media query applique des règles CSS seulement si une condition est vraie, par exemple "si l'écran fait moins de 600px de large".</p>
+      <ul class="key-points">
+        <li><code>@media (max-width: 600px) { }</code> cible les petits écrans.</li>
+        <li>Les règles à l'intérieur écrasent les règles normales sur mobile.</li>
+      </ul>
+
+      <h2>Exemple</h2>
+      <p style="color: var(--color-text-soft); font-size: 0.85rem;">L'aperçu ci-dessous est volontairement étroit (comme un téléphone) pour que tu voies l'effet de la media query :</p>
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="code-window__title">style.css</span>
+        </div>
+        <div class="code-window__body"><span class="ln">1</span><span class="attr">@media</span> <span class="punct">(</span><span class="text-token">max-width: 600px</span><span class="punct">)</span> <span class="punct">{</span>
+<span class="ln">2</span>  <span class="punct">.</span><span class="tag">carte</span> <span class="punct">{</span>
+<span class="ln">3</span>    <span class="attr">flex-direction</span><span class="punct">:</span> <span class="str">column</span><span class="punct">;</span>
+<span class="ln">4</span>  <span class="punct">}</span>
+<span class="ln">5</span><span class="punct">}</span><span class="cursor"></span></div>
+      </div>
+
+      <div class="preview-box preview-box--narrow">
+        <div class="preview-box__bar"><span class="dot-mini"></span> 📱 Aperçu mobile (étroit)</div>
+        <iframe id="examplePreview" title="Aperçu de l'exemple" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <p>C'est exactement cette technique que Kodoway utilise pour transformer son menu en liste déroulante sur mobile. Bravo, tu termines le cours CSS !</p>
+
+      <div class="lesson-cta">
+        <a href="#exercice" class="btn btn-primary">Essayer l'exercice ↓</a>
+      </div>
+    </div>
+
+    <div class="exercise-box" id="exercice">
+      <p class="exercise-box__title">🧪 À toi de jouer</p>
+      <p class="exercise-box__instructions">Écris la media query complète : sur les écrans de moins de <strong>600px</strong>, <code>.carte</code> doit passer en colonne (<code>flex-direction: column;</code>).</p>
+      <textarea id="exerciseInput" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="exercise-box__actions">
+        <button class="btn btn-primary" id="checkBtn">Voir le résultat</button>
+        <span class="feedback" id="feedback"></span>
+      </div>
+      <div class="preview-box preview-box--narrow">
+        <div class="preview-box__bar"><span class="dot-mini"></span> 📱 Aperçu mobile (étroit)</div>
+        <iframe id="exercisePreview" title="Aperçu de ton code" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <nav class="lesson-nav">
+      <span><a href="css-4.html" class="btn btn-ghost">← Leçon précédente</a></span>
+      <span><a href="javascript.html" class="btn btn-primary">Passer au cours JavaScript →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.KODOWAY_EXERCISE = {
+    type: 'css',
+    demoHTML: '<div class="carte" style="display:flex; gap:8px; background:#eef2ff; padding:10px;"><div style="background:#fff;border:1px solid #ccd;padding:6px;flex:1;">1</div><div style="background:#fff;border:1px solid #ccd;padding:6px;flex:1;">2</div><div style="background:#fff;border:1px solid #ccd;padding:6px;flex:1;">3</div></div>',
+    example: '@media (max-width: 600px) { .carte { flex-direction: column; } }',
+    pattern: /@media\s*\([^)]*max-width\s*:\s*600px[^)]*\)\s*\{\s*\.carte\s*\{[^}]*flex-direction\s*:\s*column[^}]*\}\s*\}/,
+    success: '✅ Bravo, tu as terminé le cours CSS !',
+    error: '❌ Pas encore... vérifie la syntaxe complète de ta media query.'
+  };
+</script>
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

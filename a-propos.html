@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos | Kodoway</title>
+<meta name="description" content="Kodoway est né d'un groupe d'étudiants de l'Université Révérend Kim, avec pour mission de rendre l'apprentissage du développement web accessible à tous.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html" class="active">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+    <div class="lesson__head">
+      <h1>À propos de Kodoway</h1>
+      <p class="lesson__intro">Kodoway est né d'un groupe d'étudiants de l'Université Révérend Kim, animés par une idée simple : apprendre à coder ne devrait pas être compliqué.</p>
+    </div>
+
+    <div class="lesson-content">
+      <p>Convaincus que n'importe qui peut apprendre à créer un site web, nous avons voulu construire une plateforme avec des explications claires, des exemples concrets, et la possibilité de pratiquer immédiatement — sans jargon, et sans prérequis.</p>
+      <p>Le programme avance pas à pas : le <strong>HTML</strong> pour la structure, le <strong>CSS</strong> pour le style, puis le <strong>JavaScript</strong> pour l'interactivité. Chaque leçon est courte, en français simple, et suivie d'un exercice pour vérifier ce que tu as compris en le voyant s'exécuter en direct.</p>
+      <p>Kodoway est un projet en constante évolution : de nouvelles leçons et de nouveaux exercices viendront enrichir la plateforme avec le temps.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

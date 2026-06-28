@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours JavaScript — Leçon 5 : Les conditions | Kodoway</title>
+<meta name="description" content="Apprends à utiliser if/else en JavaScript pour faire des choix dans ton code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html" class="active">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+
+    <div class="lesson__head">
+      <p class="breadcrumb"><a href="javascript.html">Cours JavaScript</a> · Leçon 5</p>
+      <div class="progress-bar">
+        <div class="progress-bar__track"><div class="progress-bar__fill" style="width: 100%;"></div></div>
+        <span class="progress-bar__label">Leçon 5 / 5</span>
+      </div>
+      <h1>Les conditions</h1>
+      <p class="lesson__intro">Une condition permet à ton code de faire un choix : "si telle chose est vraie, fais ceci, sinon fais autre chose." C'est la base de toute logique en programmation.</p>
+    </div>
+
+    <div class="lesson-content">
+      <h2>if / else</h2>
+      <ul class="key-points">
+        <li><code>if (condition) { }</code> exécute le bloc si la condition est vraie.</li>
+        <li><code>else { }</code> exécute un autre bloc si la condition est fausse.</li>
+        <li><code>===</code> vérifie si deux valeurs sont égales.</li>
+        <li><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> comparent des nombres.</li>
+      </ul>
+
+      <h2>Exemple</h2>
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="code-window__title">script.js</span>
+        </div>
+        <div class="code-window__body"><span class="ln">1</span><span class="tag">if</span> <span class="punct">(</span><span class="text-token">age >= 18</span><span class="punct">)</span> <span class="punct">{</span>
+<span class="ln">2</span>  <span class="tag">console</span><span class="punct">.</span><span class="tag">log</span><span class="punct">(</span><span class="str">"Majeur"</span><span class="punct">)</span><span class="punct">;</span>
+<span class="ln">3</span><span class="punct">}</span> <span class="tag">else</span> <span class="punct">{</span>
+<span class="ln">4</span>  <span class="tag">console</span><span class="punct">.</span><span class="tag">log</span><span class="punct">(</span><span class="str">"Mineur"</span><span class="punct">)</span><span class="punct">;</span>
+<span class="ln">5</span><span class="punct">}</span><span class="cursor"></span></div>
+      </div>
+
+      <div class="preview-box">
+        <div class="preview-box__bar"><span class="dot-mini"></span> Aperçu — avec age = 20</div>
+        <iframe id="examplePreview" title="Aperçu de l'exemple" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <p>Bravo, tu connais maintenant les bases des trois langages : HTML, CSS et JavaScript. Tu as toutes les briques pour construire un vrai site web !</p>
+
+      <div class="lesson-cta">
+        <a href="#exercice" class="btn btn-primary">Essayer l'exercice ↓</a>
+      </div>
+    </div>
+
+    <div class="exercise-box" id="exercice">
+      <p class="exercise-box__title">🧪 À toi de jouer</p>
+      <p class="exercise-box__instructions">Écris une condition <code>if</code> qui vérifie si <code>age</code> est supérieur ou égal à <strong>18</strong> (la variable <code>age</code> vaut déjà 20, essaie d'ajouter un <code>console.log()</code> dans le bloc !).</p>
+      <textarea id="exerciseInput" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="exercise-box__actions">
+        <button class="btn btn-primary" id="checkBtn">Voir le résultat</button>
+        <span class="feedback" id="feedback"></span>
+      </div>
+      <div class="preview-box">
+        <div class="preview-box__bar"><span class="dot-mini"></span> Aperçu de ton code</div>
+        <iframe id="exercisePreview" title="Aperçu de ton code" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="completion-panel">
+      <div class="emoji">🎉</div>
+      <h2>Félicitations, tu as terminé la formation Kodoway !</h2>
+      <p>Tu connais maintenant les bases du HTML, du CSS et du JavaScript — de quoi comprendre et construire un vrai site web. Direction la page Exercices pour mettre tout ça en pratique sur des défis qui combinent les trois langages.</p>
+      <a href="exercices.html" class="btn btn-primary">S'exercer avec quelques exercices →</a>
+    </div>
+
+    <nav class="lesson-nav">
+      <span><a href="javascript-4.html" class="btn btn-ghost">← Leçon précédente</a></span>
+      <span></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.KODOWAY_EXERCISE = {
+    type: 'js',
+    prelude: 'const age = 20;',
+    examplePrelude: 'const age = 20;',
+    example: 'if (age >= 18) {\n  console.log("Majeur");\n} else {\n  console.log("Mineur");\n}',
+    pattern: /if\s*\(\s*age\s*>=\s*18\s*\)/,
+    success: '✅ Bravo, tu as terminé les 3 cours !',
+    error: '❌ Pas encore... vérifie ta condition if (age >= 18).'
+  };
+</script>
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours CSS — Leçon 1 : Qu'est-ce que le CSS ? | Kodoway</title>
+<meta name="description" content="Découvre le CSS et les sélecteurs de base (élément, classe, id) pour styliser tes pages HTML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html" class="active">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+
+    <div class="lesson__head">
+      <p class="breadcrumb"><a href="css.html">Cours CSS</a> · Leçon 1</p>
+      <div class="progress-bar">
+        <div class="progress-bar__track"><div class="progress-bar__fill" style="width: 20%;"></div></div>
+        <span class="progress-bar__label">Leçon 1 / 5</span>
+      </div>
+      <h1>Qu'est-ce que le CSS ?</h1>
+      <p class="lesson__intro">Le CSS sert à habiller le HTML : couleurs, polices, espacements, mise en page. Sans CSS, un site n'a ni couleur ni style.</p>
+    </div>
+
+    <div class="lesson-content">
+      <h2>Lier le CSS à une page HTML</h2>
+      <ul class="key-points">
+        <li><code>&lt;link rel="stylesheet" href="style.css"&gt;</code> relie le fichier CSS.</li>
+        <li>Un <strong>sélecteur</strong> cible les éléments à styliser.</li>
+        <li><code>p { }</code> sélectionne tous les paragraphes (sélecteur d'élément).</li>
+        <li><code>.classe { }</code> sélectionne tous les éléments ayant cette classe.</li>
+      </ul>
+
+      <h2>Exemple</h2>
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+          <span class="code-window__title">style.css</span>
+        </div>
+        <div class="code-window__body"><span class="ln">1</span><span class="punct">.</span><span class="tag">titre</span> <span class="punct">{</span>
+<span class="ln">2</span>  <span class="attr">color</span><span class="punct">:</span> <span class="str">blue</span><span class="punct">;</span>
+<span class="ln">3</span><span class="punct">}</span><span class="cursor"></span></div>
+      </div>
+
+      <div class="preview-box">
+        <div class="preview-box__bar"><span class="dot-mini"></span> Aperçu — la règle appliquée à un vrai élément</div>
+        <iframe id="examplePreview" title="Aperçu de l'exemple" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <p>Cette règle dit : "l'élément qui a la classe <code>titre</code> doit être bleu". Une règle CSS, c'est toujours : un sélecteur, puis des accolades <code>{ }</code> contenant des propriétés.</p>
+
+      <div class="lesson-cta">
+        <a href="#exercice" class="btn btn-primary">Essayer l'exercice ↓</a>
+        <a href="css-reference.html" class="btn btn-ghost">📖 Voir toutes les propriétés CSS</a>
+      </div>
+    </div>
+
+    <div class="exercise-box" id="exercice">
+      <p class="exercise-box__title">🧪 À toi de jouer</p>
+      <p class="exercise-box__instructions">Écris une règle CSS qui sélectionne la classe <code>.titre</code> et lui donne la couleur (<code>color</code>) <strong>blue</strong>.</p>
+      <textarea id="exerciseInput" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="exercise-box__actions">
+        <button class="btn btn-primary" id="checkBtn">Voir le résultat</button>
+        <span class="feedback" id="feedback"></span>
+      </div>
+      <div class="preview-box">
+        <div class="preview-box__bar"><span class="dot-mini"></span> Aperçu de ton code</div>
+        <iframe id="exercisePreview" title="Aperçu de ton code" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <nav class="lesson-nav">
+      <span><a href="#" class="btn btn-ghost" aria-disabled="true">← Leçon précédente</a></span>
+      <span><a href="css-2.html" class="btn btn-primary">Leçon suivante →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.KODOWAY_EXERCISE = {
+    type: 'css',
+    demoHTML: '<p class="titre">Texte d\'exemple</p>',
+    example: '.titre { color: blue; }',
+    pattern: /\.titre\s*\{[^}]*color\s*:\s*blue[^}]*\}/,
+    success: '✅ Bravo, c\'est correct ! Regarde le texte devenir bleu.',
+    error: '❌ Pas encore... vérifie le sélecteur .titre et la propriété color.'
+  };
+</script>
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

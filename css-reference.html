@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aide-mémoire CSS — Toutes les propriétés | Kodoway</title>
+<meta name="description" content="La liste des propriétés et sélecteurs CSS les plus utiles, avec leur rôle et leurs cas particuliers, pour aller plus loin après la leçon 1.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="logo">Kodo<span class="dot">way</span></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html" class="active">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main class="lesson">
+  <div class="container">
+    <div class="lesson__head">
+      <p class="breadcrumb"><a href="css.html">Cours CSS</a> · Aide-mémoire</p>
+      <h1>Toutes les propriétés CSS utiles</h1>
+      <p class="lesson__intro">Tu as fini la leçon 1 ? Voici un aide-mémoire avec les sélecteurs et propriétés les plus utilisées, leur rôle, et quelques cas particuliers. Reviens ici quand tu en as besoin.</p>
+    </div>
+
+    <div class="lesson-content">
+
+      <h2>Les sélecteurs</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">p { }</code><p>Sélecteur d'élément : cible toutes les balises p.</p></div>
+        <div class="ref-item"><code class="ref-tag">.classe { }</code><p>Sélecteur de classe : cible tous les éléments avec class="classe".</p><span class="ref-note">⚠️ Cas particulier : une classe peut être utilisée sur plusieurs éléments différents.</span></div>
+        <div class="ref-item"><code class="ref-tag">#id { }</code><p>Sélecteur d'id : cible l'unique élément avec id="id".</p><span class="ref-note">⚠️ Cas particulier : un id ne doit apparaître qu'une seule fois dans toute la page.</span></div>
+        <div class="ref-item"><code class="ref-tag">* { }</code><p>Sélecteur universel : cible absolument tous les éléments.</p></div>
+        <div class="ref-item"><code class="ref-tag">div p { }</code><p>Cible les p qui sont à l'intérieur d'un div (sélecteur descendant).</p></div>
+        <div class="ref-item"><code class="ref-tag">a:hover { }</code><p>Pseudo-classe : applique le style seulement quand la souris survole l'élément.</p><span class="ref-note">⚠️ Cas particuliers utiles : :first-child, :last-child, :focus (au clic dans un champ), :nth-child(2).</span></div>
+      </div>
+
+      <h2>Texte et typographie</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">color</code><p>Couleur du texte.</p></div>
+        <div class="ref-item"><code class="ref-tag">font-size</code><p>Taille du texte (ex : 16px, 1.2rem).</p></div>
+        <div class="ref-item"><code class="ref-tag">font-weight</code><p>Épaisseur du texte (normal, bold, ou un nombre comme 600).</p></div>
+        <div class="ref-item"><code class="ref-tag">font-family</code><p>La police utilisée (ex : 'Inter', sans-serif).</p></div>
+        <div class="ref-item"><code class="ref-tag">text-align</code><p>Alignement du texte : left, center, right, justify.</p></div>
+        <div class="ref-item"><code class="ref-tag">text-decoration</code><p>Souligner, barrer ou retirer le soulignement (underline, line-through, none).</p><span class="ref-note">⚠️ Cas particulier : text-decoration: none; retire le soulignement des liens &lt;a&gt;.</span></div>
+        <div class="ref-item"><code class="ref-tag">line-height</code><p>Hauteur de ligne, pour l'espacement vertical entre les lignes de texte.</p></div>
+      </div>
+
+      <h2>Couleurs et fond</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">background-color</code><p>Couleur de fond d'un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">background-image</code><p>Image de fond : url('chemin.jpg').</p></div>
+        <div class="ref-item"><code class="ref-tag">opacity</code><p>Transparence d'un élément, de 0 (invisible) à 1 (opaque).</p></div>
+      </div>
+
+      <h2>Le modèle de boîte</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">width / height</code><p>Largeur et hauteur d'un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">padding</code><p>Espace intérieur, entre le contenu et la bordure.</p></div>
+        <div class="ref-item"><code class="ref-tag">margin</code><p>Espace extérieur, entre la boîte et ses voisins.</p><span class="ref-note">⚠️ Cas particulier : margin: 0 auto; centre horizontalement un bloc qui a une largeur définie.</span></div>
+        <div class="ref-item"><code class="ref-tag">border</code><p>Bordure : épaisseur, style et couleur (ex : 1px solid gray).</p></div>
+        <div class="ref-item"><code class="ref-tag">border-radius</code><p>Arrondit les coins d'un élément.</p></div>
+        <div class="ref-item"><code class="ref-tag">box-sizing: border-box</code><p>Fait en sorte que padding et border soient inclus dans width, pour des calculs plus simples.</p></div>
+      </div>
+
+      <h2>Affichage et positionnement</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">display</code><p>Comment l'élément se comporte : block, inline, flex, grid, none (caché).</p><span class="ref-note">⚠️ Cas particulier : display: none; cache complètement l'élément (il ne prend plus de place).</span></div>
+        <div class="ref-item"><code class="ref-tag">position</code><p>static (par défaut), relative, absolute ou fixed (reste à l'écran même en scrollant).</p></div>
+        <div class="ref-item"><code class="ref-tag">top / left / right / bottom</code><p>Décale un élément quand position n'est pas static.</p></div>
+        <div class="ref-item"><code class="ref-tag">z-index</code><p>Ordre d'empilement : un nombre plus grand passe au-dessus.</p></div>
+      </div>
+
+      <h2>Flexbox</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">display: flex</code><p>Active Flexbox : les enfants directs se placent en ligne.</p></div>
+        <div class="ref-item"><code class="ref-tag">flex-direction</code><p>row (ligne, par défaut) ou column (colonne).</p></div>
+        <div class="ref-item"><code class="ref-tag">justify-content</code><p>Alignement horizontal : center, space-between, flex-end...</p></div>
+        <div class="ref-item"><code class="ref-tag">align-items</code><p>Alignement vertical : center, flex-start, stretch...</p></div>
+        <div class="ref-item"><code class="ref-tag">gap</code><p>Espace régulier entre les enfants, sans avoir besoin de margin.</p></div>
+        <div class="ref-item"><code class="ref-tag">flex-wrap: wrap</code><p>Permet aux éléments de passer à la ligne suivante s'ils manquent de place.</p></div>
+      </div>
+
+      <h2>Responsive</h2>
+      <div class="ref-list">
+        <div class="ref-item"><code class="ref-tag">@media (max-width: 600px) { }</code><p>Applique des règles seulement sous une certaine largeur d'écran.</p></div>
+        <div class="ref-item"><code class="ref-tag">% / vw / vh</code><p>Unités relatives à la taille du parent ou de l'écran (viewport width/height).</p></div>
+        <div class="ref-item"><code class="ref-tag">rem / em</code><p>Unités relatives à la taille de police (rem = taille racine, em = taille du parent).</p><span class="ref-note">⚠️ Cas particulier : préfère rem pour font-size, ça respecte les préférences d'accessibilité du visiteur.</span></div>
+      </div>
+
+    </div>
+
+    <nav class="lesson-nav">
+      <span><a href="css.html" class="btn btn-ghost">← Retour à la leçon 1</a></span>
+      <span><a href="css-2.html" class="btn btn-primary">Passer à la leçon 2 →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__copy">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="footer__links">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/script.js?v=2" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.KODOWAY_SCRIPT_LOADED) {
+      var banner = document.createElement('div');
+      banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banner.textContent = "⚠️ js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>
