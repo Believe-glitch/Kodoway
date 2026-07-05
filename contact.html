@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Kodoway</title>
+<meta name="description" content="Contacte l'équipe Kodoway pour une question ou une suggestion.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html" class="actif">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+
+    <div class="lecon-entete">
+      <h1>Contact</h1>
+      <p class="lecon-intro">Une question, une suggestion, un bug à signaler ? On est là.</p>
+    </div>
+
+    <p style="color: var(--texte-doux); margin-bottom: 24px;">Tu peux nous écrire directement via le formulaire ci-dessous, ou nous trouver par email, Instagram et WhatsApp :</p>
+
+    <div class="icones-contact">
+     
+      <a class="icone-contact" href="mailto:believemukengeshayi1@gmail.com" aria-label="Envoyer un email à Kodoway">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+      </a>
+     
+      <a class="icone-contact" href="https://www.instagram.com/flowbmk?igsh=eTdmdnJ6MHl6OHM1&utm_source=qr" target="_blank" rel="noopener" aria-label="Voir le profil Instagram de Kodoway">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+      
+      <a class="icone-contact"
+
+   href="https://wa.me/243851788225"
+
+   target="_blank"
+
+   rel="noopener"
+
+   aria-label="Contacter Kodoway sur WhatsApp">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+
+     viewBox="0 0 32 32"
+
+     width="24"
+
+     height="24"
+
+     fill="currentColor">
+
+<path d="M19.11 17.23c-.28-.14-1.65-.81-1.91-.91-.25-.09-.44-.14-.62.14-.19.28-.72.91-.89 1.09-.16.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.91-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.49-.85-2.05-.22-.53-.45-.46-.62-.47h-.53c-.19 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s.99 2.67 1.13 2.86c.14.19 1.95 2.98 4.73 4.18.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.31.23-.63.23-1.17.16-1.28-.07-.12-.25-.19-.53-.33z"/>
+
+<path d="M16.03 3C8.84 3 3 8.72 3 15.79c0 2.49.72 4.82 1.96 6.8L3 29l6.64-1.9a13.2 13.2 0 0 0 6.39 1.63c7.19 0 13.03-5.72 13.03-12.79C29.06 8.72 23.22 3 16.03 3zm0 23.45a10.8 10.8 0 0 1-5.5-1.51l-.39-.23-3.94 1.13 1.17-3.84-.25-.4a10.47 10.47 0 0 1-1.63-5.62c0-5.82 4.74-10.56 10.56-10.56 5.82 0 10.56 4.74 10.56 10.56 0 5.82-4.74 10.47-10.58 10.47z"/>
+
+</svg>
+
+</a>
+    </div>
+
+    <form class="formulaire-contact" id="formulaireContact">
+      <div class="champ-groupe">
+        <label for="nomContact">Ton nom</label>
+        <input type="text" id="nomContact" name="name" placeholder="Ex : Léa" required>
+      </div>
+      <div class="champ-groupe">
+        <label for="emailContact">Ton email</label>
+        <input type="email" id="emailContact" name="email" placeholder="ex@email.com" required>
+      </div>
+      <div class="champ-groupe">
+        <label for="messageContact">Ton message</label>
+        <textarea id="messageContact" name="message" placeholder="Écris ton message ici..." required></textarea>
+      </div>
+      <button type="submit" class="bouton bouton-principal">Envoyer</button>
+      <span class="resultat" id="resultatContact" style="margin-left: 14px;"></span>
+    </form>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

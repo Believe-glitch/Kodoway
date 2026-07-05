@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours HTML — Leçon 1 : Qu'est-ce que le HTML ? | Kodoway</title>
+<meta name="description" content="Apprends les bases du HTML avec Kodoway : la première leçon explique à quoi servent les balises et comment construire ta première page web.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html" class="actif">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+
+    <div class="lecon-entete">
+      <p class="fil-ariane"><a href="html.html">Cours HTML</a> · Leçon 1</p>
+      <div class="barre-progression">
+        <div class="barre-progression-fond"><div class="barre-progression-remplissage" style="width: 20%;"></div></div>
+        <span class="barre-progression-texte">Leçon 1 / 5</span>
+      </div>
+      <h1>Qu'est-ce que le HTML ?</h1>
+      <p class="lecon-intro">Le HTML (HyperText Markup Language) est le langage qui sert à construire la structure de toutes les pages web. C'est la première brique à connaître avant le CSS et le JavaScript.</p>
+    </div>
+
+    <div class="lecon-contenu">
+      <h2>Des balises pour tout structurer</h2>
+      <p>Un site web est fait de petits blocs appelés <strong>balises</strong>. Chaque balise dit au navigateur ce qu'est un élément : un titre, un paragraphe, un bouton, une image...</p>
+
+      <ul class="points-cles">
+        <li><code>&lt;h1&gt;</code> sert à écrire un titre principal.</li>
+        <li><code>&lt;p&gt;</code> sert à écrire un paragraphe de texte.</li>
+        <li><code>&lt;button&gt;</code> sert à créer un bouton cliquable.</li>
+        <li>La plupart des balises s'ouvrent <code>&lt;p&gt;</code> et se ferment <code>&lt;/p&gt;</code>.</li>
+      </ul>
+
+      <h2>Exemple : une mini page HTML</h2>
+      <p>Voici à quoi ressemble un petit morceau de HTML, et juste en dessous, à quoi ça ressemble une fois affiché par le navigateur :</p>
+
+      <div class="fenetre-code">
+        <div class="fenetre-code-barre">
+          <span class="pastille pastille-rouge"></span><span class="pastille pastille-jaune"></span><span class="pastille pastille-verte"></span>
+          <span class="fenetre-code-titre">exemple.html</span>
+        </div>
+        <div class="fenetre-code-corps"><span class="num-ligne">1</span><span class="ponctuation">&lt;</span><span class="balise">h1</span><span class="ponctuation">&gt;</span><span class="texte">Mon premier titre</span><span class="ponctuation">&lt;/</span><span class="balise">h1</span><span class="ponctuation">&gt;</span>
+<span class="num-ligne">2</span><span class="ponctuation">&lt;</span><span class="balise">p</span><span class="ponctuation">&gt;</span><span class="texte">Bienvenue sur mon site.</span><span class="ponctuation">&lt;/</span><span class="balise">p</span><span class="ponctuation">&gt;</span>
+<span class="num-ligne">3</span><span class="ponctuation">&lt;</span><span class="balise">button</span><span class="ponctuation">&gt;</span><span class="texte">Cliquez ici</span><span class="ponctuation">&lt;/</span><span class="balise">button</span><span class="ponctuation">&gt;</span><span class="curseur"></span></div>
+      </div>
+
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu — ce que ça affiche réellement</div>
+        <iframe id="apercuExemple" title="Aperçu de l'exemple" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <p>Remarque que chaque balise s'ouvre avec <code>&lt;...&gt;</code> et se referme avec <code>&lt;/...&gt;</code>. Le texte entre les deux, c'est ce qui s'affiche sur la page.</p>
+
+      <div class="lecon-actions">
+        <a href="#exercice" class="bouton bouton-principal">Essayer l'exercice ↓</a>
+        <a href="html-reference.html" class="bouton bouton-secondaire">📖 Voir toutes les balises HTML</a>
+      </div>
+    </div>
+
+    <div class="bloc-exercice" id="exercice">
+      <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
+      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;h1&gt;</code> qui affiche le texte <strong>Mon premier titre</strong>, puis clique sur « Voir le résultat ».</p>
+      <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
+        <span class="resultat" id="resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe id="apercuExercice" title="Aperçu de ton code" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <nav class="lecon-navigation">
+      <span><a href="#" class="bouton bouton-secondaire" aria-disabled="true">← Leçon précédente</a></span>
+      <span><a href="html-2.html" class="bouton bouton-principal">Leçon suivante →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.exerciceActuel = {
+    type: 'html',
+    exemple: '<h1>Mon premier titre</h1><p>Bienvenue sur mon site.</p><button>Cliquez ici</button>',
+    motif: /<h1[^>]*>\s*mon\s+premier\s+titre\s*<\/h1>/,
+    succes: '✅ Bravo, c\'est correct ! Regarde l\'aperçu : ton titre s\'affiche.',
+    erreur: '❌ Pas encore... vérifie que tu as écrit <h1>Mon premier titre</h1>'
+  };
+</script>
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

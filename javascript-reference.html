@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aide-mémoire JavaScript | Kodoway</title>
+<meta name="description" content="Tout le vocabulaire JavaScript essentiel : variables, fonctions, conditions, DOM, événements.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html" class="actif">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+    <div class="lecon-entete">
+      <p class="fil-ariane"><a href="javascript.html">Cours JavaScript</a> · Aide-mémoire</p>
+      <h1>Tout le vocabulaire JavaScript</h1>
+      <p class="lecon-intro">Un aide-mémoire avec les mots-clés et concepts les plus utiles en JavaScript. Reviens ici quand tu as un trou de mémoire.</p>
+    </div>
+
+    <div class="lecon-contenu">
+
+      <h2>Variables et types</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">let nom = valeur;</code><p>Déclare une variable qui peut changer de valeur plus tard.</p></div>
+        <div class="element-aide"><code class="aide-code">const nom = valeur;</code><p>Déclare une constante : sa valeur ne peut plus changer.</p><span class="aide-note">⚠️ Cas particulier : préfère toujours const, et utilise let seulement si tu sais que la valeur va changer.</span></div>
+        <div class="element-aide"><code class="aide-code">"texte"</code><p>Une chaîne de caractères (string), entre guillemets simples ou doubles.</p></div>
+        <div class="element-aide"><code class="aide-code">42</code><p>Un nombre (number), sans guillemets.</p></div>
+        <div class="element-aide"><code class="aide-code">true / false</code><p>Un booléen : vrai ou faux.</p></div>
+        <div class="element-aide"><code class="aide-code">[1, 2, 3]</code><p>Un tableau (array) : une liste ordonnée de valeurs.</p></div>
+      </div>
+
+      <h2>Opérateurs</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">+ - * /</code><p>Addition, soustraction, multiplication, division.</p></div>
+        <div class="element-aide"><code class="aide-code">===</code><p>Égalité stricte : vérifie si deux valeurs sont identiques.</p><span class="aide-note">⚠️ Cas particulier : évite == (sans le troisième égal), il peut donner des résultats surprenants.</span></div>
+        <div class="element-aide"><code class="aide-code">!==</code><p>Différence stricte : vrai si les deux valeurs sont différentes.</p></div>
+        <div class="element-aide"><code class="aide-code">&gt; &lt; &gt;= &lt;=</code><p>Comparaisons numériques.</p></div>
+        <div class="element-aide"><code class="aide-code">&amp;&amp; / ||</code><p>ET logique (les deux conditions vraies) / OU logique (au moins une vraie).</p></div>
+      </div>
+
+      <h2>Fonctions</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">function nom(param) { }</code><p>Déclare une fonction réutilisable.</p></div>
+        <div class="element-aide"><code class="aide-code">return valeur;</code><p>Renvoie un résultat depuis la fonction et arrête son exécution.</p></div>
+        <div class="element-aide"><code class="aide-code">nom(argument);</code><p>Appelle la fonction avec une vraie valeur.</p></div>
+        <div class="element-aide"><code class="aide-code">const f = () =&gt; { };</code><p>Fonction fléchée : une autre façon d'écrire une fonction, plus courte.</p></div>
+      </div>
+
+      <h2>Conditions et boucles</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">if (condition) { }</code><p>Exécute le bloc seulement si la condition est vraie.</p></div>
+        <div class="element-aide"><code class="aide-code">else if (...) { }</code><p>Teste une autre condition si la précédente était fausse.</p></div>
+        <div class="element-aide"><code class="aide-code">else { }</code><p>Exécute ce bloc si aucune condition précédente n'était vraie.</p></div>
+        <div class="element-aide"><code class="aide-code">for (let i = 0; i &lt; 5; i++) { }</code><p>Répète un bloc un nombre précis de fois.</p><span class="aide-note">⚠️ Cas particulier : attention aux boucles infinies si la condition ne devient jamais fausse.</span></div>
+      </div>
+
+      <h2>Manipuler le DOM</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">document.querySelector('.classe')</code><p>Sélectionne le premier élément qui correspond au sélecteur CSS donné.</p></div>
+        <div class="element-aide"><code class="aide-code">document.querySelectorAll('.classe')</code><p>Sélectionne tous les éléments correspondants.</p></div>
+        <div class="element-aide"><code class="aide-code">.textContent</code><p>Lit ou modifie le texte d'un élément.</p></div>
+        <div class="element-aide"><code class="aide-code">.classList.add('x')</code><p>Ajoute une classe CSS à un élément.</p></div>
+        <div class="element-aide"><code class="aide-code">.classList.remove('x')</code><p>Retire une classe CSS d'un élément.</p></div>
+        <div class="element-aide"><code class="aide-code">.classList.toggle('x')</code><p>Ajoute la classe si absente, la retire si présente.</p></div>
+      </div>
+
+      <h2>Les événements</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">.addEventListener('click', fn)</code><p>Exécute fn quand l'élément est cliqué.</p></div>
+        <div class="element-aide"><code class="aide-code">'input'</code><p>Se déclenche à chaque frappe dans un champ de texte.</p></div>
+        <div class="element-aide"><code class="aide-code">'submit'</code><p>Se déclenche à l'envoi d'un formulaire.</p><span class="aide-note">⚠️ Cas particulier : pense à appeler event.preventDefault() pour empêcher le rechargement de la page.</span></div>
+        <div class="element-aide"><code class="aide-code">console.log(valeur)</code><p>Affiche une valeur dans la console du navigateur (F12). Pratique pour déboguer.</p></div>
+      </div>
+
+    </div>
+
+    <nav class="lecon-navigation">
+      <span><a href="javascript.html" class="bouton bouton-secondaire">← Retour à la leçon 1</a></span>
+      <span><a href="javascript-2.html" class="bouton bouton-principal">Passer à la leçon 2 →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+/* Kodoway — feuille de style
+   Thème sombre bleu/noir, police Inter pour le texte et JetBrains Mono pour le code */
+
+:root {
+  --fond: #0A0F1C;
+  --fond-doux: #111A2E;
+  --fond-carte: #16213A;
+  --bleu: #4C7DFF;
+  --bleu-fonce: #2952FF;
+  --bleu-pale: rgba(76, 125, 255, 0.15);
+  --texte: #E9EDF7;
+  --texte-doux: #8B96B4;
+  --bordure: #232D45;
+
+  --arrondi-petit: 8px;
+  --arrondi-moyen: 14px;
+  --arrondi-grand: 22px;
+
+  --ombre: 0 12px 32px rgba(0, 0, 0, 0.45);
+
+  --police-texte: 'Inter', system-ui, -apple-system, sans-serif;
+  --police-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* reset de base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; color-scheme: dark; }
+body {
+  font-family: var(--police-texte);
+  color: var(--texte);
+  background: var(--fond);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+.conteneur {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--bleu);
+  outline-offset: 2px;
+}
+
+/* en-tête / menu du haut */
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 15, 28, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bordure);
+}
+.entete-interieur {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+.logo {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+.logo .logo-accent { color: var(--bleu); }
+
+.menu-nav {
+  display: flex;
+  gap: 28px;
+}
+.menu-nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--texte-doux);
+  transition: color 0.2s ease;
+}
+.menu-nav a:hover,
+.menu-nav a.actif { color: var(--bleu); }
+
+/* bouton hamburger -> se transforme en croix quand ouvert */
+.bouton-menu {
+  display: none;
+  position: relative;
+  z-index: 60;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+.bouton-menu:hover { background: var(--fond-carte); }
+.bouton-menu span {
+  width: 22px;
+  height: 2px;
+  background: var(--texte);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.bouton-menu.actif span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.bouton-menu.actif span:nth-child(2) { opacity: 0; }
+.bouton-menu.actif span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* fond noir derrière le menu quand il est ouvert sur mobile */
+.fond-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 45;
+}
+.fond-menu.ouvert { opacity: 1; pointer-events: auto; }
+
+/* boutons */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--arrondi-moyen);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  border: 1px solid transparent;
+}
+.bouton-principal {
+  background: var(--bleu);
+  color: #fff;
+  box-shadow: var(--ombre);
+}
+.bouton-principal:hover { background: var(--bleu-fonce); transform: translateY(-1px); }
+.bouton-secondaire {
+  background: transparent;
+  border-color: var(--bordure);
+  color: var(--texte);
+}
+.bouton-secondaire:hover { border-color: var(--bleu); color: var(--bleu); }
+
+/* grande intro en haut de l'accueil */
+.intro { padding: 96px 0 80px; }
+.intro-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.etiquette {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.intro h1 {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.intro p.texte-intro {
+  font-size: 1.1rem;
+  color: var(--texte-doux);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.intro-boutons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* fausse fenêtre d'éditeur de code, utilisée un peu partout sur le site */
+.fenetre-code {
+  background: #0F1629;
+  border-radius: var(--arrondi-grand);
+  box-shadow: var(--ombre);
+  overflow: hidden;
+  border: 1px solid var(--bordure);
+}
+.fenetre-code-barre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #161D33;
+  border-bottom: 1px solid var(--bordure);
+}
+.pastille { width: 11px; height: 11px; border-radius: 50%; }
+.pastille-rouge { background: #FF5F57; }
+.pastille-jaune { background: #FEBC2E; }
+.pastille-verte { background: #28C840; }
+.fenetre-code-titre {
+  margin-left: 8px;
+  font-size: 0.78rem;
+  color: #7C89AD;
+  font-family: var(--police-code);
+}
+.fenetre-code-corps {
+  padding: 22px 24px;
+  font-family: var(--police-code);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  white-space: pre;
+  overflow-x: auto;
+}
+/* coloration syntaxique "à la main" pour les exemples de code affichés */
+.fenetre-code-corps .num-ligne {
+  color: #4A5578;
+  display: inline-block;
+  width: 22px;
+  user-select: none;
+}
+.balise { color: #7AA2FF; }
+.attribut { color: #FFB86C; }
+.chaine { color: #9ECE6A; }
+.ponctuation { color: #7C89AD; }
+.texte { color: #E6E9F5; }
+.curseur {
+  display: inline-block;
+  width: 7px;
+  height: 1.1em;
+  background: #7AA2FF;
+  vertical-align: middle;
+  animation: clignote 1s steps(1) infinite;
+}
+@keyframes clignote { 50% { opacity: 0; } }
+
+/* sections génériques de l'accueil */
+.section { padding: 80px 0; }
+.section-douce { background: var(--fond-doux); }
+.section-entete { max-width: 560px; margin-bottom: 48px; }
+.section-entete h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.section-entete p { color: var(--texte-doux); font-size: 1.05rem; }
+
+/* les 3 cartes de cours sur l'accueil */
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.carte {
+  background: var(--fond-carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--arrondi-grand);
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+}
+.carte:hover { transform: translateY(-4px); box-shadow: var(--ombre); }
+.carte-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--police-code);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+.carte-icone-html { background: rgba(227, 121, 43, 0.15); color: #FF9D5C; }
+.carte-icone-css { background: var(--bleu-pale); color: var(--bleu); }
+.carte-icone-js { background: rgba(182, 137, 0, 0.18); color: #E8C752; }
+.carte h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.carte p { color: var(--texte-doux); font-size: 0.95rem; margin-bottom: 20px; }
+.carte-lien { font-weight: 600; color: var(--bleu); font-size: 0.9rem; }
+
+/* les 3 étapes "comment ça marche" */
+.etapes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.etape { transition: opacity 0.5s ease, transform 0.5s ease; }
+.etape-numero {
+  font-family: var(--police-code);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--bleu);
+  margin-bottom: 14px;
+  display: block;
+}
+.etape h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.etape p { color: var(--texte-doux); font-size: 0.92rem; }
+
+/* petite animation d'apparition au scroll, gérée par le JS.
+   Par défaut tout est visible (voir plus bas) : c'est le script qui
+   ajoute .cache-au-debut avant d'observer, comme ça si jamais le JS
+   ne tourne pas, rien ne reste invisible. */
+.cache-au-debut { opacity: 0; transform: translateY(16px); }
+.carte.visible, .etape.visible { opacity: 1; transform: translateY(0); }
+
+/* pied de page */
+.pied-de-page { border-top: 1px solid var(--bordure); padding: 48px 0 32px; }
+.pied-de-page-interieur {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.pied-de-page-texte { color: var(--texte-doux); font-size: 0.85rem; }
+.pied-de-page-liens { display: flex; gap: 24px; flex-wrap: wrap; }
+.pied-de-page-liens a { color: var(--texte-doux); font-size: 0.9rem; }
+.pied-de-page-liens a:hover { color: var(--bleu); }
+
+/* responsive général */
+@media (max-width: 900px) {
+  .intro-grille { grid-template-columns: 1fr; }
+  .cartes { grid-template-columns: 1fr; }
+  .etapes { grid-template-columns: 1fr; }
+}
+
+/* menu mobile en tiroir, glisse depuis la droite */
+@media (max-width: 840px) {
+  .bouton-menu { display: flex; }
+  .menu-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(80vw, 320px);
+    background: var(--fond-carte);
+    border-left: 1px solid var(--bordure);
+    flex-direction: column;
+    gap: 4px;
+    padding: 88px 12px 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 58;
+    overflow-y: auto;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.35);
+  }
+  .menu-nav.ouvert { transform: translateX(0); }
+  .menu-nav li { padding: 0; border-top: none; }
+  .menu-nav li a {
+    display: block;
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+  }
+  .menu-nav li a:hover, .menu-nav li a.actif { background: var(--fond-doux); color: var(--bleu); }
+}
+
+/* ===== pages de cours (leçons) ===== */
+
+.lecon { padding: 56px 0 100px; }
+.lecon-entete { max-width: 720px; margin-bottom: 8px; }
+.fil-ariane { font-size: 0.85rem; color: var(--texte-doux); }
+.fil-ariane a { color: var(--bleu); font-weight: 600; }
+
+.barre-progression { display: flex; align-items: center; gap: 14px; margin: 18px 0 32px; max-width: 720px; }
+.barre-progression-fond { flex: 1; height: 8px; background: var(--bordure); border-radius: 999px; overflow: hidden; }
+.barre-progression-remplissage { height: 100%; background: var(--bleu); border-radius: 999px; }
+.barre-progression-texte { font-family: var(--police-code); font-size: 0.8rem; color: var(--texte-doux); white-space: nowrap; }
+
+.lecon h1 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 18px; }
+.lecon-intro { color: var(--texte-doux); font-size: 1.05rem; max-width: 680px; }
+
+.lecon-contenu { max-width: 720px; }
+.lecon-contenu h2 { font-size: 1.3rem; font-weight: 700; margin: 36px 0 14px; }
+.lecon-contenu p { margin-bottom: 16px; }
+.points-cles { margin: 20px 0 28px; display: grid; gap: 10px; }
+.points-cles li {
+  display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; color: var(--texte-doux);
+  background: var(--fond-doux); border-radius: var(--arrondi-petit); padding: 12px 16px;
+}
+.points-cles code {
+  font-family: var(--police-code); background: var(--fond-carte); border: 1px solid var(--bordure);
+  padding: 2px 6px; border-radius: 6px; color: var(--bleu); font-size: 0.85rem;
+}
+
+.lecon .fenetre-code { margin: 24px 0 36px; max-width: 720px; }
+.lecon-actions { margin: 8px 0 56px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* le bloc d'exercice à la fin de chaque leçon */
+.bloc-exercice {
+  max-width: 720px; background: var(--fond-carte); border: 1px solid var(--bordure);
+  border-radius: var(--arrondi-grand); padding: 32px; margin-bottom: 56px;
+}
+.bloc-exercice-titre { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+.bloc-exercice-consignes { color: var(--texte-doux); font-size: 0.95rem; margin-bottom: 18px; }
+.bloc-exercice textarea {
+  width: 100%; min-height: 120px; font-family: var(--police-code); font-size: 0.88rem;
+  background: #0F1629; color: #E6E9F5; border: 1px solid var(--bordure); border-radius: var(--arrondi-moyen);
+  padding: 16px; resize: vertical; line-height: 1.6;
+}
+.bloc-exercice-actions { display: flex; align-items: center; gap: 14px; margin-top: 16px; flex-wrap: wrap; }
+.resultat { font-size: 0.92rem; font-weight: 600; padding: 10px 16px; border-radius: var(--arrondi-petit); display: none; }
+.resultat.reussi { display: block; background: rgba(40, 200, 120, 0.15); color: #4ADE80; }
+.resultat.echec { display: block; background: rgba(255, 90, 90, 0.15); color: #FF6B6B; }
+
+/* navigation précédent / suivant en bas de leçon */
+.lecon-navigation {
+  display: flex; justify-content: space-between; gap: 16px; max-width: 720px;
+  border-top: 1px solid var(--bordure); padding-top: 28px; flex-wrap: wrap;
+}
+.lecon-navigation .bouton[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+.lecon-navigation-info { font-size: 0.78rem; color: var(--texte-doux); margin-top: 6px; display: block; }
+
+@media (max-width: 600px) {
+  .bloc-exercice-actions { flex-direction: column; align-items: stretch; }
+}
+
+/* ===== page Exercices (les défis) ===== */
+.groupes-exercices { display: grid; gap: 48px; }
+.groupe-exercice h3 {
+  font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.groupe-exercice h3 .badge {
+  width: 28px; height: 28px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--police-code); font-size: 0.75rem; font-weight: 700;
+}
+.liste-exercices { display: grid; gap: 10px; }
+.liste-exercices li a {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--fond-carte); border: 1px solid var(--bordure);
+  border-radius: var(--arrondi-moyen); padding: 14px 18px; font-size: 0.95rem;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.liste-exercices li a:hover { border-color: var(--bleu); transform: translateX(2px); }
+.liste-exercices li a::after { content: "→"; color: var(--bleu); font-weight: 700; margin-left: 12px; }
+
+/* badges de difficulté sur les défis */
+.badge-difficulte {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 999px; margin-left: 8px; text-transform: uppercase; letter-spacing: 0.03em; vertical-align: middle;
+}
+.difficulte-facile { background: rgba(40, 200, 120, 0.15); color: #4ADE80; }
+.difficulte-moyenne { background: rgba(232, 199, 82, 0.18); color: #E8C752; }
+.difficulte-difficile { background: rgba(255, 90, 90, 0.15); color: #FF6B6B; }
+.separateur-defis { max-width: 720px; border: none; border-top: 1px solid var(--bordure); margin: 48px 0 40px; }
+
+/* ===== formulaire de contact ===== */
+.formulaire-contact { max-width: 520px; }
+.champ-groupe { margin-bottom: 18px; }
+.champ-groupe label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+.champ-groupe input, .champ-groupe textarea {
+  width: 100%; padding: 12px 14px; border-radius: var(--arrondi-moyen); border: 1px solid var(--bordure);
+  background: var(--fond-carte); color: var(--texte); font-family: var(--police-texte); font-size: 0.95rem;
+}
+.champ-groupe textarea { min-height: 140px; resize: vertical; }
+.champ-groupe input:focus, .champ-groupe textarea:focus { outline: none; border-color: var(--bleu); }
+
+/* icônes email / instagram sur la page contact (sans texte, juste l'icône qui s'anime) */
+.icones-contact { display: flex; gap: 16px; margin: 8px 0 40px; }
+.icone-contact {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--fond-carte); border: 1px solid var(--bordure);
+  color: var(--texte-doux);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.icone-contact svg { width: 24px; height: 24px; }
+.icone-contact:hover, .icone-contact:focus-visible {
+  transform: translateY(-4px) scale(1.06);
+  background: var(--bleu-pale);
+  border-color: var(--bleu);
+  color: var(--bleu);
+  box-shadow: var(--ombre);
+}
+.icone-contact:active { transform: translateY(-1px) scale(0.98); }
+
+/* ===== aperçu en direct dans une iframe (HTML/CSS/JS) ===== */
+.apercu {
+  margin: 0 0 36px; border-radius: var(--arrondi-grand); overflow: hidden;
+  border: 1px solid var(--bordure); background: #fff; max-width: 720px;
+}
+.apercu-barre {
+  display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+  background: var(--fond-carte); border-bottom: 1px solid var(--bordure);
+  font-family: var(--police-code); font-size: 0.75rem; color: var(--texte-doux);
+}
+.apercu-barre .pastille-mini { width: 8px; height: 8px; border-radius: 50%; background: var(--bleu); }
+.apercu iframe { width: 100%; height: 150px; border: none; display: block; background: #fff; }
+.apercu-haut iframe { height: 200px; }
+.apercu-etroit { max-width: 300px; }
+.bloc-exercice .apercu { margin: 18px 0 0; }
+
+/* le gros message à la fin du 3e cours */
+.panneau-felicitations {
+  max-width: 720px; text-align: center; margin-bottom: 48px; padding: 40px 32px;
+  border-radius: var(--arrondi-grand); border: 1px solid var(--bordure);
+  background: linear-gradient(135deg, rgba(76, 125, 255, 0.16), rgba(76, 125, 255, 0.03));
+}
+.panneau-felicitations .emoji { font-size: 2.4rem; margin-bottom: 12px; }
+.panneau-felicitations h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+.panneau-felicitations p { color: var(--texte-doux); margin: 0 auto 24px; max-width: 460px; }
+
+/* ===== pages d'aide-mémoire (HTML / CSS / JS) ===== */
+.liste-aide { display: grid; gap: 12px; max-width: 760px; }
+.element-aide {
+  background: var(--fond-carte); border: 1px solid var(--bordure);
+  border-radius: var(--arrondi-moyen); padding: 16px 20px;
+}
+.element-aide code.aide-code {
+  font-family: var(--police-code); color: var(--bleu); font-weight: 700;
+  font-size: 0.92rem; display: block; margin-bottom: 6px;
+}
+.element-aide p { color: var(--texte-doux); font-size: 0.92rem; margin: 0; }
+.element-aide .aide-note { display: block; margin-top: 8px; font-size: 0.85rem; color: #E8C752; }
+
+/* on désactive les animations pour les gens qui préfèrent moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

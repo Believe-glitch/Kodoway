@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les défis | Kodoway</title>
+<meta name="description" content="Des vrais défis à résoudre après avoir fini les 3 cours Kodoway — du plus facile au plus difficile.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html" class="actif">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+
+    <div class="lecon-entete">
+      <h1>Les défis Kodoway</h1>
+      <p class="lecon-intro">Ici, pas de leçon pour te guider : ce sont de vrais défis, du plus facile au plus difficile. Certains combinent HTML + CSS ou HTML + JavaScript — normal, c'est voulu ! Si tu as fait les 3 cours, tu as tout ce qu'il faut.</p>
+    </div>
+
+    <!-- Défi 1 -->
+    <div class="bloc-exercice bloc-defi">
+      <p class="bloc-exercice-titre">🧩 Défi 1 <span class="badge-difficulte difficulte-facile">Facile</span></p>
+      <p class="bloc-exercice-consignes">Crée une mini carte de présentation : un titre <code>&lt;h2&gt;</code> avec le texte <strong>Mon profil</strong>, et un paragraphe <code>&lt;p&gt;</code> avec le texte <strong>Je code avec Kodoway</strong>. L'ordre n'a pas d'importance.</p>
+      <textarea class="defi-zone-code" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal defi-verifier">Voir le résultat</button>
+        <span class="resultat defi-resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe class="defi-apercu" title="Aperçu du défi 1" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <script type="application/json" class="defi-config">
+      {
+        "type": "html",
+        "motif": "(?=[\\s\\S]*<h2[^>]*>\\s*mon profil\\s*</h2>)(?=[\\s\\S]*<p[^>]*>\\s*je code avec kodoway\\s*</p>)",
+        "succes": "Bravo, exactement ce qu'il fallait !",
+        "erreur": "Pas encore... il manque le h2 Mon profil ou le p Je code avec Kodoway."
+      }
+      </script>
+    </div>
+
+    <!-- Défi 2 -->
+    <div class="bloc-exercice bloc-defi">
+      <p class="bloc-exercice-titre">🧩 Défi 2 <span class="badge-difficulte difficulte-facile">Facile</span></p>
+      <p class="bloc-exercice-consignes">Écris une seule règle CSS pour la classe <code>.carte</code> qui combine deux propriétés : <code>display: flex;</code> ET <code>padding: 20px;</code>.</p>
+      <textarea class="defi-zone-code" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal defi-verifier">Voir le résultat</button>
+        <span class="resultat defi-resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe class="defi-apercu" title="Aperçu du défi 2" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <script type="application/json" class="defi-config">
+      {
+        "type": "css",
+        "demoHTML": "<div class=\"carte\"><span>Item 1</span><span>Item 2</span><span>Item 3</span></div>",
+        "motif": "\\.carte\\s*\\{(?=[^}]*display\\s*:\\s*flex)(?=[^}]*padding\\s*:\\s*20px)[^}]*\\}",
+        "succes": "Parfait, les deux propriétés sont là !",
+        "erreur": "Pas encore... il faut display: flex ET padding: 20px dans la même règle .carte."
+      }
+      </script>
+    </div>
+
+    <!-- Défi 3 -->
+    <div class="bloc-exercice bloc-defi">
+      <p class="bloc-exercice-titre">🧩 Défi 3 <span class="badge-difficulte difficulte-moyenne">Moyen</span></p>
+      <p class="bloc-exercice-consignes">Mélange HTML + CSS : écris un <code>&lt;nav&gt;</code> avec 3 liens <code>&lt;a&gt;</code>, puis une balise <code>&lt;style&gt;</code> qui met ce nav en ligne avec <code>display: flex;</code>.</p>
+      <textarea class="defi-zone-code" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal defi-verifier">Voir le résultat</button>
+        <span class="resultat defi-resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe class="defi-apercu" title="Aperçu du défi 3" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <script type="application/json" class="defi-config">
+      {
+        "type": "html",
+        "motif": "(?=[\\s\\S]*<nav[^>]*>[\\s\\S]*<a[^>]*>[\\s\\S]*</nav>)(?=[\\s\\S]*<style>[\\s\\S]*nav[^{]*\\{[^}]*display\\s*:\\s*flex[^}]*\\}[\\s\\S]*</style>)",
+        "succes": "Nickel : structure ET style sont corrects !",
+        "erreur": "Pas encore... vérifie ton nav avec des liens a, et ta balise style avec nav { display: flex; }."
+      }
+      </script>
+    </div>
+
+    <!-- Défi 4 -->
+    <div class="bloc-exercice bloc-defi">
+      <p class="bloc-exercice-titre">🧩 Défi 4 <span class="badge-difficulte difficulte-moyenne">Moyen</span></p>
+      <p class="bloc-exercice-consignes">Écris une fonction <code>estMajeur(age)</code> qui renvoie <code>true</code> si <code>age</code> est supérieur ou égal à 18, et <code>false</code> sinon. Regarde dans l'aperçu : la console affiche le résultat pour 20 et 15.</p>
+      <textarea class="defi-zone-code" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal defi-verifier">Voir le résultat</button>
+        <span class="resultat defi-resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe class="defi-apercu" title="Aperçu du défi 4" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <script type="application/json" class="defi-config">
+      {
+        "type": "js",
+        "apres": "console.log(estMajeur(20)); console.log(estMajeur(15));",
+        "motif": "function\\s+estmajeur\\s*\\(\\s*age\\s*\\)\\s*\\{[\\s\\S]*(return\\s+age\\s*>=\\s*18|return\\s+true[\\s\\S]*return\\s+false|return\\s+false[\\s\\S]*return\\s+true)[\\s\\S]*\\}",
+        "succes": "Exactement ! Regarde l'aperçu : true puis false.",
+        "erreur": "Pas encore... vérifie le nom de la fonction estMajeur et la comparaison age >= 18."
+      }
+      </script>
+    </div>
+
+    <!-- Défi 5 -->
+    <div class="bloc-exercice bloc-defi">
+      <p class="bloc-exercice-titre">🧩 Défi 5 — Le grand défi <span class="badge-difficulte difficulte-difficile">Difficile</span></p>
+      <p class="bloc-exercice-consignes">Tout en un : crée un <code>&lt;button&gt;</code> et un <code>&lt;p&gt;</code>, puis utilise JavaScript pour qu'un clic sur le bouton change le texte du paragraphe pour qu'il contienne le mot <strong>Bravo</strong>.</p>
+      <textarea class="defi-zone-code" spellcheck="false" placeholder="Écris ton code ici (HTML + script)..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal defi-verifier">Voir le résultat</button>
+        <span class="resultat defi-resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu — clique sur ton bouton pour tester !</div>
+        <iframe class="defi-apercu" title="Aperçu du défi 5" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <script type="application/json" class="defi-config">
+      {
+        "type": "html",
+        "motif": "(?=[\\s\\S]*<button)(?=[\\s\\S]*addeventlistener\\([^)]*click)(?=[\\s\\S]*(textcontent|innerhtml)\\s*=[^;]*bravo)",
+        "succes": "Incroyable, tu as réussi le grand défi ! 🎉",
+        "erreur": "Pas encore... il faut un bouton, un addEventListener sur 'click', et un texte qui contient Bravo."
+      }
+      </script>
+    </div>
+
+    <hr class="separateur-defis">
+
+    <div class="section-entete">
+      <h2>Envie de réviser une leçon ?</h2>
+      <p>Si un défi t'a bloqué, retourne voir l'exercice de la leçon correspondante.</p>
+    </div>
+
+    <div class="groupes-exercices">
+      <div class="groupe-exercice">
+        <h3><span class="badge carte-icone-html">&lt;/&gt;</span> Cours HTML</h3>
+        <ul class="liste-exercices">
+          <li><a href="html.html#exercice">Leçon 1 — Qu'est-ce que le HTML ?</a></li>
+          <li><a href="html-2.html#exercice">Leçon 2 — Les liens et les images</a></li>
+          <li><a href="html-3.html#exercice">Leçon 3 — Les listes et les conteneurs</a></li>
+          <li><a href="html-4.html#exercice">Leçon 4 — Les formulaires</a></li>
+          <li><a href="html-5.html#exercice">Leçon 5 — Construire une page complète</a></li>
+        </ul>
+      </div>
+      <div class="groupe-exercice">
+        <h3><span class="badge carte-icone-css">{ }</span> Cours CSS</h3>
+        <ul class="liste-exercices">
+          <li><a href="css.html#exercice">Leçon 1 — Qu'est-ce que le CSS ?</a></li>
+          <li><a href="css-2.html#exercice">Leçon 2 — Le texte et les couleurs</a></li>
+          <li><a href="css-3.html#exercice">Leçon 3 — Le modèle de boîte</a></li>
+          <li><a href="css-4.html#exercice">Leçon 4 — Flexbox</a></li>
+          <li><a href="css-5.html#exercice">Leçon 5 — Le responsive design</a></li>
+        </ul>
+      </div>
+      <div class="groupe-exercice">
+        <h3><span class="badge carte-icone-js">JS</span> Cours JavaScript</h3>
+        <ul class="liste-exercices">
+          <li><a href="javascript.html#exercice">Leçon 1 — Qu'est-ce que le JavaScript ?</a></li>
+          <li><a href="javascript-2.html#exercice">Leçon 2 — Les fonctions</a></li>
+          <li><a href="javascript-3.html#exercice">Leçon 3 — Les événements</a></li>
+          <li><a href="javascript-4.html#exercice">Leçon 4 — Manipuler le DOM</a></li>
+          <li><a href="javascript-5.html#exercice">Leçon 5 — Les conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

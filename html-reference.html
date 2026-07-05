@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aide-mémoire HTML — Toutes les balises | Kodoway</title>
+<meta name="description" content="La liste des balises HTML les plus utiles, avec leur rôle et leurs cas particuliers, pour aller plus loin après la leçon 1.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html" class="actif">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+    <div class="lecon-entete">
+      <p class="fil-ariane"><a href="html.html">Cours HTML</a> · Aide-mémoire</p>
+      <h1>Toutes les balises HTML utiles</h1>
+      <p class="lecon-intro">Tu as fini la leçon 1 ? Voici un aide-mémoire avec les balises les plus utilisées, leur rôle, et quelques cas particuliers à connaître. Pas besoin de tout retenir — reviens ici quand tu en as besoin.</p>
+    </div>
+
+    <div class="lecon-contenu">
+
+      <h2>Structure de base d'une page</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;!DOCTYPE html&gt;</code><p>Toujours en première ligne : indique au navigateur que c'est du HTML5.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;html&gt;...&lt;/html&gt;</code><p>Englobe toute la page.</p><span class="aide-note">⚠️ Cas particulier : ajoute toujours lang="fr" pour le français → &lt;html lang="fr"&gt;.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;head&gt;...&lt;/head&gt;</code><p>Contient les infos invisibles : titre, description, liens CSS.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;title&gt;...&lt;/title&gt;</code><p>Le titre affiché dans l'onglet du navigateur.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;meta&gt;</code><p>Donne des infos au navigateur (encodage, mobile...).</p><span class="aide-note">⚠️ Cas particulier : balise sans fermeture, et sans elle ton site peut être mal affiché sur mobile.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;body&gt;...&lt;/body&gt;</code><p>Contient tout ce qui est visible sur la page.</p></div>
+      </div>
+
+      <h2>Titres et texte</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;h1&gt;...&lt;/h1&gt;</code><p>Le titre principal de la page.</p><span class="aide-note">⚠️ Cas particulier : un seul &lt;h1&gt; par page, idéalement. Pour les sous-titres, utilise h2, h3...</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;h2&gt; à &lt;h6&gt;</code><p>Sous-titres, du plus important (h2) au moins important (h6).</p><span class="aide-note">⚠️ Cas particulier : ne sautes pas de niveau juste pour la taille — utilise plutôt le CSS pour la taille du texte.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;p&gt;...&lt;/p&gt;</code><p>Un paragraphe de texte.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;strong&gt;...&lt;/strong&gt;</code><p>Met le texte en gras, et lui donne de l'importance.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;em&gt;...&lt;/em&gt;</code><p>Met le texte en italique, pour insister sur un mot.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;br&gt;</code><p>Force un retour à la ligne, sans créer un nouveau paragraphe.</p><span class="aide-note">⚠️ Cas particulier : balise sans fermeture. À utiliser rarement (préfère le CSS pour l'espacement).</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;hr&gt;</code><p>Trace une ligne horizontale pour séparer deux sections.</p></div>
+      </div>
+
+      <h2>Liens et médias</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;a href="..."&gt;...&lt;/a&gt;</code><p>Crée un lien cliquable.</p><span class="aide-note">⚠️ Cas particulier : ajoute target="_blank" pour ouvrir dans un nouvel onglet, et rel="noopener" avec, pour la sécurité.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;img src="..." alt="..."&gt;</code><p>Affiche une image.</p><span class="aide-note">⚠️ Cas particulier : balise sans fermeture, et l'attribut alt est obligatoire pour l'accessibilité (et s'affiche si l'image ne charge pas).</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;video src="..." controls&gt;&lt;/video&gt;</code><p>Intègre une vidéo, avec ses contrôles de lecture.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;audio src="..." controls&gt;&lt;/audio&gt;</code><p>Intègre un son ou une musique.</p></div>
+      </div>
+
+      <h2>Listes</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;ul&gt;...&lt;/ul&gt;</code><p>Liste à puces (unordered list).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;ol&gt;...&lt;/ol&gt;</code><p>Liste numérotée (ordered list), quand l'ordre compte (étapes 1, 2, 3...).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;li&gt;...&lt;/li&gt;</code><p>Un élément de liste, toujours à l'intérieur d'un ul ou ol.</p></div>
+      </div>
+
+      <h2>Conteneurs génériques</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;div&gt;...&lt;/div&gt;</code><p>Conteneur en bloc, sans signification particulière : sert à regrouper des éléments pour les styliser.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;span&gt;...&lt;/span&gt;</code><p>Comme &lt;div&gt;, mais en ligne (n'occupe que la place de son contenu).</p></div>
+      </div>
+
+      <h2>Formulaires</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;form&gt;...&lt;/form&gt;</code><p>Englobe tous les champs d'un formulaire.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;input type="text"&gt;</code><p>Champ de texte simple.</p><span class="aide-note">⚠️ Cas particuliers : type="email" valide un email, type="password" cache le texte, type="number" n'accepte que des chiffres, type="checkbox" / "radio" pour des choix.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;label for="id"&gt;...&lt;/label&gt;</code><p>Décrit un champ pour l'utilisateur.</p><span class="aide-note">⚠️ Cas particulier : l'attribut for doit correspondre à l'id de l'input pour que cliquer sur le label active le champ.</span></div>
+        <div class="element-aide"><code class="aide-code">&lt;textarea&gt;&lt;/textarea&gt;</code><p>Zone de texte sur plusieurs lignes.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;select&gt;&lt;option&gt;...&lt;/option&gt;&lt;/select&gt;</code><p>Liste déroulante avec plusieurs choix.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;button type="submit"&gt;...&lt;/button&gt;</code><p>Bouton qui envoie le formulaire.</p><span class="aide-note">⚠️ Cas particulier : type="button" ne soumet rien, utile pour un bouton géré en JavaScript.</span></div>
+      </div>
+
+      <h2>Balises sémantiques</h2>
+      <div class="liste-aide">
+        <div class="element-aide"><code class="aide-code">&lt;header&gt;...&lt;/header&gt;</code><p>En-tête de la page ou d'une section (souvent le menu).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;nav&gt;...&lt;/nav&gt;</code><p>Regroupe les liens de navigation.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;main&gt;...&lt;/main&gt;</code><p>Le contenu principal de la page (un seul par page).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;section&gt;...&lt;/section&gt;</code><p>Regroupe une partie thématique de la page.</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;article&gt;...&lt;/article&gt;</code><p>Un contenu autonome (un article de blog, une carte produit...).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;aside&gt;...&lt;/aside&gt;</code><p>Contenu secondaire, lié mais pas indispensable (une barre latérale).</p></div>
+        <div class="element-aide"><code class="aide-code">&lt;footer&gt;...&lt;/footer&gt;</code><p>Bas de page ou bas de section (liens, copyright).</p></div>
+      </div>
+
+    </div>
+
+    <nav class="lecon-navigation">
+      <span><a href="html.html" class="bouton bouton-secondaire">← Retour à la leçon 1</a></span>
+      <span><a href="html-2.html" class="bouton bouton-principal">Passer à la leçon 2 →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

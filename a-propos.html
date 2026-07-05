@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos | Kodoway</title>
+<meta name="description" content="Découvre l'histoire de Kodoway, né d'un projet étudiant à l'Université Révérend Kim.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html" class="actif">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+
+    <div class="lecon-entete">
+      <h1>À propos de Kodoway</h1>
+      <p class="lecon-intro">Kodoway est né d'une idée simple : apprendre à créer des sites web ne devrait pas être compliqué.</p>
+    </div>
+
+    <div class="lecon-contenu">
+      <h2>L'histoire</h2>
+      <p>Ce projet a été lancé par un groupe d'étudiants de l'<strong>Université Révérend Kim</strong>, avec une conviction : tout le monde devrait pouvoir apprendre à créer un site web, sans avoir besoin d'un cursus technique ni de ressources payantes.</p>
+
+      <p>Kodoway propose un chemin clair, en trois étapes : le <strong>HTML</strong> pour la structure, le <strong>CSS</strong> pour le style, puis le <strong>JavaScript</strong> pour l'interactivité. Chaque leçon est courte, en français simple, et suivie d'un exercice pratique pour vérifier qu'on a bien compris.</p>
+
+      <h2>La philosophie</h2>
+      <p>On croit que la meilleure façon d'apprendre à <strong>créer un site web</strong>, c'est de voir le résultat en direct. C'est pour ça que chaque leçon et chaque exercice de Kodoway affichent un aperçu en temps réel du code qu'on écrit — pas besoin d'ouvrir un autre onglet ou d'installer quoi que ce soit.</p>
+
+      <p>Le site est et restera <strong>100% gratuit</strong>, en français, et ouvert à tous, que tu aies 15 ou 50 ans.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>

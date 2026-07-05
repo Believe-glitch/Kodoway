@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours HTML — Leçon 3 : Les listes et les conteneurs | Kodoway</title>
+<meta name="description" content="Apprends à organiser du contenu avec des listes (ul, li) et des conteneurs (div, span) en HTML.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-interieur">
+    <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
+    <nav>
+      <ul class="menu-nav" id="menuNav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="html.html" class="actif">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">JavaScript</a></li>
+        <li><a href="exercices.html">Exercices</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="bouton-menu" id="boutonMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="fond-menu" id="fondMenu"></div>
+
+<main class="lecon">
+  <div class="conteneur">
+
+    <div class="lecon-entete">
+      <p class="fil-ariane"><a href="html.html">Cours HTML</a> · Leçon 3</p>
+      <div class="barre-progression">
+        <div class="barre-progression-fond"><div class="barre-progression-remplissage" style="width: 60%;"></div></div>
+        <span class="barre-progression-texte">Leçon 3 / 5</span>
+      </div>
+      <h1>Les listes et les conteneurs</h1>
+      <p class="lecon-intro">Pour organiser du contenu, le HTML propose des listes et des conteneurs qui permettent de regrouper des éléments ensemble.</p>
+    </div>
+
+    <div class="lecon-contenu">
+      <h2>Les listes</h2>
+      <p>Une liste à puces utilise <code>&lt;ul&gt;</code>, une liste numérotée utilise <code>&lt;ol&gt;</code>. Chaque élément de la liste est écrit avec <code>&lt;li&gt;</code>.</p>
+
+      <ul class="points-cles">
+        <li><code>&lt;ul&gt;</code> crée une liste à puces.</li>
+        <li><code>&lt;ol&gt;</code> crée une liste numérotée.</li>
+        <li><code>&lt;li&gt;</code> représente un élément de la liste.</li>
+        <li><code>&lt;div&gt;</code> regroupe des éléments en bloc, <code>&lt;span&gt;</code> regroupe du texte en ligne.</li>
+      </ul>
+
+      <h2>Exemple</h2>
+      <div class="fenetre-code">
+        <div class="fenetre-code-barre">
+          <span class="pastille pastille-rouge"></span><span class="pastille pastille-jaune"></span><span class="pastille pastille-verte"></span>
+          <span class="fenetre-code-titre">exemple.html</span>
+        </div>
+        <div class="fenetre-code-corps"><span class="num-ligne">1</span><span class="ponctuation">&lt;</span><span class="balise">ul</span><span class="ponctuation">&gt;</span>
+<span class="num-ligne">2</span><span class="ponctuation">&lt;</span><span class="balise">li</span><span class="ponctuation">&gt;</span><span class="texte">HTML</span><span class="ponctuation">&lt;/</span><span class="balise">li</span><span class="ponctuation">&gt;</span>
+<span class="num-ligne">3</span><span class="ponctuation">&lt;</span><span class="balise">li</span><span class="ponctuation">&gt;</span><span class="texte">CSS</span><span class="ponctuation">&lt;/</span><span class="balise">li</span><span class="ponctuation">&gt;</span>
+<span class="num-ligne">4</span><span class="ponctuation">&lt;/</span><span class="balise">ul</span><span class="ponctuation">&gt;</span><span class="curseur"></span></div>
+      </div>
+
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu</div>
+        <iframe id="apercuExemple" title="Aperçu de l'exemple" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <p>Le <code>&lt;div&gt;</code> est très utilisé pour créer des blocs (une carte, une section...) que l'on stylera ensuite avec le CSS.</p>
+
+      <div class="lecon-actions">
+        <a href="#exercice" class="bouton bouton-principal">Essayer l'exercice ↓</a>
+      </div>
+    </div>
+
+    <div class="bloc-exercice" id="exercice">
+      <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
+      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;li&gt;</code> qui contient le texte <strong>JavaScript</strong>.</p>
+      <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
+      <div class="bloc-exercice-actions">
+        <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
+        <span class="resultat" id="resultat"></span>
+      </div>
+      <div class="apercu">
+        <div class="apercu-barre"><span class="pastille-mini"></span> Aperçu de ton code</div>
+        <iframe id="apercuExercice" title="Aperçu de ton code" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <nav class="lecon-navigation">
+      <span><a href="html-2.html" class="bouton bouton-secondaire">← Leçon précédente</a></span>
+      <span><a href="html-4.html" class="bouton bouton-principal">Leçon suivante →</a></span>
+    </nav>
+
+  </div>
+</main>
+
+<footer class="pied-de-page">
+  <div class="conteneur pied-de-page-interieur">
+    <div>
+      <p class="pied-de-page-texte">© 2026 Kodoway. Tous droits réservés.</p>
+    </div>
+    <ul class="pied-de-page-liens">
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="exercices.html">Exercices</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  window.exerciceActuel = {
+    type: 'html',
+    exemple: '<ul><li>HTML</li><li>CSS</li></ul>',
+    motif: /<li[^>]*>\s*javascript\s*<\/li>/,
+    succes: '✅ Bravo, c\'est correct !',
+    erreur: '❌ Pas encore... vérifie ta balise <li>.'
+  };
+</script>
+<script src="script.js" defer></script>
+<script>
+  setTimeout(function () {
+    if (!window.scriptCharge) {
+      var banniere = document.createElement('div');
+      banniere.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#B91C1C;color:#fff;padding:14px 18px;font-family:system-ui,sans-serif;font-size:0.9rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+      banniere.textContent = "js/script.js ne s'est pas chargé. Vérifie que le dossier js/ existe au bon endroit, ou vide le cache (Ctrl+F5 / Cmd+Maj+R).";
+      document.body.insertBefore(banniere, document.body.firstChild);
+    }
+  }, 1200);
+</script>
+</body>
+</html>
