@@ -120,16 +120,22 @@
 </footer>
 
 <script>
-  window.exerciceActuel = {
-    type: 'css',
-    demoHTML: '<h1>Titre d\'exemple</h1>',
-    exemple: 'h1 { color: red; text-align: center; }',
-    demoHTML: '<p>Paragraphe d\'exemple</p>',
-exemple: 'p { color: green; }',
-motif: /p\s*\{[^}]*color\s*:\s*green[^}]*\}/,
-succes: '✅ Bravo, c\'est correct !',
-erreur: '❌ Pas encore... vérifie le sélecteur p et la propriété color.'
-  };
+ window.exerciceActuel = {
+  type: 'css',
+
+  // Exemple affiché dans la leçon
+  demoHTML: '<h1>Titre d\'exemple</h1>',
+  exemple: 'h1 { color: red; text-align: center; }',
+
+  // Exercice à réaliser
+  exerciceHTML: '<p>Paragraphe d\'exemple</p>',
+  exerciceExemple: 'p { color: green; }',
+
+  motif: /p\s*\{[^}]*color\s*:\s*green[^}]*\}/,
+
+  succes: '✅ Bravo, c\'est correct !',
+  erreur: '❌ Pas encore... vérifie le sélecteur p et la propriété color.'
+};
 </script>
 <script src="script.js" defer></script>
 <script>
