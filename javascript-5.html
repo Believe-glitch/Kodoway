@@ -87,7 +87,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une condition <code>if</code> qui vérifie si <code>age</code> est supérieur ou égal à <strong>18</strong>. (La variable age est déjà déclarée dans l'aperçu.)</p>
+      <p class="bloc-exercice-consignes">Écris une condition <code>if</code> qui vérifie si <code>score</code> est supérieur ou égal à <strong>50</strong>. La variable score est déjà déclarée dans l'aperçu.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -130,11 +130,10 @@
 <script>
   window.exerciceActuel = {
     type: 'js',
-    avant: 'const age = 20;',
-    exemple: 'const age = 20;\nif (age >= 18) {\n  console.log("Majeur");\n} else {\n  console.log("Mineur");\n}',
-    motif: /if\s*\(\s*age\s*>=\s*18\s*\)/,
-    succes: '✅ Bravo, tu as terminé les 3 cours !',
-    erreur: '❌ Pas encore... vérifie ta condition if (age >= 18).'
+   avant: 'const score = 75;',
+motif: /if\s*\(\s*score\s*>=\s*50\s*\)/,
+succes: '✅ Bravo, tu as terminé les 3 cours !',
+erreur: '❌ Pas encore... vérifie ta condition if (score >= 50).'
   };
 </script>
 <script src="script.js" defer></script>

@@ -86,7 +86,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Modifie le <code>padding</code> de la classe <code>.carte</code> pour qu'il soit de <strong>10px</strong>.</p>
+      <p class="bloc-exercice-consignes">Écris une règle CSS pour la classe <code>.boite</code> avec un <code>margin</code> de <strong>20px</strong>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -124,9 +124,9 @@
     type: 'css',
     demoHTML: '<div class="carte" style="background:#eef2ff; display:inline-block;">Contenu de la carte</div>',
     exemple: '.carte { padding: 20px; border: 1px solid gray; margin: 10px; }',
-    motif: /\.carte\s*\{[^}]*padding\s*:\s*10px[^}]*\}/,
-    succes: '✅ Bravo, c\'est correct ! Regarde l\'espace autour du texte changer.',
-    erreur: '❌ Pas encore... vérifie le sélecteur .carte et padding: 10px.'
+    motif: /\.boite\s*\{[^}]*margin\s*:\s*20px[^}]*\}/,
+succes: '✅ Bravo, c\'est correct !',
+erreur: '❌ Pas encore... vérifie le sélecteur .boite et margin: 20px.'
   };
 </script>
 <script src="script.js" defer></script>

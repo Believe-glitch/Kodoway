@@ -84,7 +84,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Un bouton et un paragraphe sont déjà dans l'aperçu. Ajoute un écouteur de <strong>clic</strong> sur le bouton pour que le paragraphe affiche le texte <strong>Tu as cliqué !</strong></p>
+      <p class="bloc-exercice-consignes">Un bouton et un paragraphe sont déjà dans l'aperçu. Ajoute un écouteur de <strong>clic</strong> sur le bouton pour que le paragraphe affiche le texte <strong>Ça marche !</strong></p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -123,9 +123,9 @@
     demoHTML: '<button class="mon-bouton" style="padding:8px 16px;cursor:pointer;">Clique ici</button><p id="message" style="margin-top:12px;color:#555;">En attente du clic...</p>',
     exemple: 'const monBouton = document.querySelector(\'.mon-bouton\');\nmonBouton.addEventListener(\'click\', function() {\n  alert(\'Tu as cliqué !\');\n});',
     avant: 'window.monBouton = document.querySelector(\'.mon-bouton\');',
-    motif: /addeventlistener\(\s*["']click["'][\s\S]*textcontent\s*=\s*["']tu as cliqu[eé]\s*!?["']/,
-    succes: '✅ Bravo, c\'est correct ! Clique sur le bouton dans l\'aperçu pour tester.',
-    erreur: '❌ Pas encore... vérifie l\'événement "click" et que tu changes le textContent du paragraphe.'
+    motif: /addeventlistener\(\s*["']click["'][\s\S]*textcontent\s*=\s*["']ça\s+marche\s*!?["']/,
+succes: '✅ Bravo, clique sur le bouton dans l\'aperçu pour tester !',
+erreur: '❌ Pas encore... vérifie l\'événement "click" et le textContent.'
   };
 </script>
 <script src="script.js" defer></script>

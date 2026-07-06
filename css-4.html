@@ -86,7 +86,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une règle CSS pour la classe <code>.conteneur</code> qui active Flexbox (<code>display: flex;</code>). Regarde les 3 cases s'aligner.</p>
+      <p class="bloc-exercice-consignes">Écris une règle CSS pour la classe <code>.menu</code> qui active Flexbox et ajoute un <code>gap</code> de <strong>16px</strong>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -122,11 +122,10 @@
 <script>
   window.exerciceActuel = {
     type: 'css',
-    demoHTML: '<div class="conteneur" style="background:#eef2ff; padding:12px;"><div style="background:#fff;border:1px solid #ccd;padding:8px;">1</div><div style="background:#fff;border:1px solid #ccd;padding:8px;">2</div><div style="background:#fff;border:1px solid #ccd;padding:8px;">3</div></div>',
-    exemple: '.conteneur { display: flex; justify-content: center; gap: 16px; }',
-    motif: /\.conteneur\s*\{[^}]*display\s*:\s*flex[^}]*\}/,
-    succes: '✅ Bravo, c\'est correct ! Les 3 cases sont maintenant en ligne.',
-    erreur: '❌ Pas encore... vérifie le sélecteur .conteneur et display: flex;'
+    demoHTML: '<div class="menu" style="background:#eef2ff; padding:12px;"><div style="background:#fff;border:1px solid #ccd;padding:8px;">Accueil</div><div style="background:#fff;border:1px solid #ccd;padding:8px;">Cours</div><div style="background:#fff;border:1px solid #ccd;padding:8px;">Contact</div></div>',
+motif: /\.menu\s*\{(?=[^}]*display\s*:\s*flex)(?=[^}]*gap\s*:\s*16px)[^}]*\}/,
+succes: '✅ Bravo, les liens sont maintenant en ligne !',
+erreur: '❌ Pas encore... il faut display: flex ET gap: 16px dans .menu.'
   };
 </script>
 <script src="script.js" defer></script>

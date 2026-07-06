@@ -85,7 +85,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une fonction nommée <code>saluer</code> (sans paramètre) qui fait <code>return "Bonjour";</code></p>
+      <p class="bloc-exercice-consignes">Écris une fonction <code>doubler(nombre)</code> qui renvoie le double du nombre passé en paramètre.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -123,10 +123,10 @@
     type: 'js',
     exemple: 'function addition(a, b) {\n  return a + b;\n}',
     exempleApres: 'console.log(addition(2, 3));',
-    apres: 'console.log(saluer());',
-    motif: /function\s+saluer\s*\(\s*\)\s*\{[^}]*return\s*["']bonjour["'][^}]*\}/,
-    succes: '✅ Bravo, c\'est correct ! Regarde l\'aperçu : ta fonction renvoie "Bonjour".',
-    erreur: '❌ Pas encore... vérifie le nom de la fonction et le return "Bonjour".'
+   apres: 'console.log(doubler(5));',
+motif: /function\s+doubler\s*\(\s*nombre\s*\)\s*\{[^}]*return\s+nombre\s*\*\s*2[^}]*\}/,
+succes: '✅ Bravo ! Regarde l\'aperçu : doubler(5) affiche 10.',
+erreur: '❌ Pas encore... vérifie le nom de la fonction et return nombre * 2.'
   };
 </script>
 <script src="script.js" defer></script>

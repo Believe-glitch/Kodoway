@@ -86,7 +86,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une règle CSS pour le sélecteur <code>h1</code> qui lui donne la couleur (<code>color</code>) <strong>red</strong>.</p>
+      <p class="bloc-exercice-consignes">Écris une règle CSS pour le sélecteur <code>p</code> qui lui donne la couleur (<code>color</code>) <strong>green</strong>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -124,9 +124,11 @@
     type: 'css',
     demoHTML: '<h1>Titre d\'exemple</h1>',
     exemple: 'h1 { color: red; text-align: center; }',
-    motif: /h1\s*\{[^}]*color\s*:\s*red[^}]*\}/,
-    succes: '✅ Bravo, c\'est correct !',
-    erreur: '❌ Pas encore... vérifie le sélecteur h1 et la propriété color.'
+    demoHTML: '<p>Paragraphe d\'exemple</p>',
+exemple: 'p { color: green; }',
+motif: /p\s*\{[^}]*color\s*:\s*green[^}]*\}/,
+succes: '✅ Bravo, c\'est correct !',
+erreur: '❌ Pas encore... vérifie le sélecteur p et la propriété color.'
   };
 </script>
 <script src="script.js" defer></script>

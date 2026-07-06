@@ -122,7 +122,7 @@
   window.exerciceActuel = {
     type: 'html',
     exemple: '<a href="https://kodoway.com">Visiter Kodoway</a><br><br><img src="chat.jpg" width="200" alt="Un chat noir">',
-    motif: /<a[^>]*href\s*=\s*["']https?:\/\/(www\.)?google\.com\/?["'][^>]*>\s*visiter\s+google\s*<\/a>/,
+    motif: /<a[^>]*href\s*=\s*["']https?:\/\/(www\.)?google\.com\/?["'][^>]*>\s*visiter\s+google\s*<\/a>/i,
 succes: '✅ Bravo, c\'est correct !',
 erreur: '❌ Pas encore... vérifie le href et le texte du lien.'
   };
