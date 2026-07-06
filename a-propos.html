@@ -11,10 +11,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
-
+ 
 <header class="entete">
   <div class="entete-interieur">
     <a href="index.html" class="logo">Kodo<span class="logo-accent">way</span></a>
@@ -34,32 +34,49 @@
     </button>
   </div>
 </header>
-
+ 
 <div class="fond-menu" id="fondMenu"></div>
-
+ 
 <main class="lecon">
   <div class="conteneur">
-
+ 
     <div class="lecon-entete">
       <h1>À propos de Kodoway</h1>
-      <p class="lecon-intro">Kodoway est né d'une idée simple : apprendre à créer des sites web ne devrait pas être compliqué.</p>
+      <p class="lecon-intro">Kodoway est né au sein d'un groupe d'étudiants de l'Université Révérend Kim, d'un constat simple : apprendre le développement web en français, sans se noyer dans le jargon technique, c'est compliqué à trouver.</p>
     </div>
-
+ 
     <div class="lecon-contenu">
-      <h2>L'histoire</h2>
-      <p>Ce projet a été lancé par un groupe d'étudiants de l'<strong>Université Révérend Kim</strong>, avec une conviction : tout le monde devrait pouvoir apprendre à créer un site web, sans avoir besoin d'un cursus technique ni de ressources payantes.</p>
-
-      <p>Kodoway propose un chemin clair, en trois étapes : le <strong>HTML</strong> pour la structure, le <strong>CSS</strong> pour le style, puis le <strong>JavaScript</strong> pour l'interactivité. Chaque leçon est courte, en français simple, et suivie d'un exercice pratique pour vérifier qu'on a bien compris.</p>
-
-      <h2>La philosophie</h2>
-      <p>On croit que la meilleure façon d'apprendre à <strong>créer un site web</strong>, c'est de voir le résultat en direct. C'est pour ça que chaque leçon et chaque exercice de Kodoway affichent un aperçu en temps réel du code qu'on écrit — pas besoin d'ouvrir un autre onglet ou d'installer quoi que ce soit.</p>
-
-      <p>Le site est et restera <strong>100% gratuit</strong>, en français, et ouvert à tous, que tu aies 15 ou 50 ans.</p>
+      <h2>Notre histoire</h2>
+      <p>On est passés par là. On a galéré avec les mêmes notions, cherché les mêmes explications, et on n'a pas toujours trouvé. Alors on a créé la ressource qu'on aurait aimé avoir — simple, claire, 100% en français.</p>
+      <p>Si tu démarres de zéro ou que tu bloques sur les bases, ce site est fait pour toi.</p>
+ 
+      <h2>Ce que tu vas apprendre</h2>
+      <ul class="points-cles">
+        <li>Créer et structurer une page web complète avec le <strong>HTML</strong>.</li>
+        <li>La mettre en forme et la rendre belle avec le <strong>CSS</strong>.</li>
+        <li>La rendre interactive avec le <strong>JavaScript</strong>.</li>
+      </ul>
+      <p>À la fin des 3 cours, tu es capable de construire ta propre page web de A à Z — sans avoir eu besoin d'installer quoi que ce soit.</p>
+ 
+      <h2>Notre philosophie</h2>
+      <p>Chaque leçon est courte et suivie d'un exercice pratique avec un aperçu en direct. Tu vois le résultat de ton code immédiatement, sans ouvrir un autre onglet. Kodoway est et restera <strong>100% gratuit</strong>, ouvert à tous.</p>
+ 
+      <h2>L'équipe</h2>
+      <p style="color: var(--texte-doux); line-height: 2;">
+        Mukengeshayi Kadima Believe &nbsp;·&nbsp;
+        Matongo Yordi &nbsp;·&nbsp;
+        N'songo Tubi Dylan &nbsp;·&nbsp;
+        Bilonda Luboya Joyce &nbsp;·&nbsp;
+        Mbangu Dako Isaac
+      </p>
+      <p style="color: var(--texte-doux); font-size: 0.9rem;">Université Révérend Kim · 2026</p>
+ 
+      <p style="margin-top: 40px;">Une question ou une suggestion ? <a href="contact.html" style="color: var(--bleu); font-weight: 600;">On est joignables ici →</a></p>
     </div>
-
+ 
   </div>
 </main>
-
+ 
 <footer class="pied-de-page">
   <div class="conteneur pied-de-page-interieur">
     <div>
@@ -72,8 +89,8 @@
     </ul>
   </div>
 </footer>
-
-<script src="script.js" defer></script>
+ 
+<script src="js/script.js?v=3" defer></script>
 <script>
   setTimeout(function () {
     if (!window.scriptCharge) {
@@ -86,3 +103,4 @@
 </script>
 </body>
 </html>
+ 
