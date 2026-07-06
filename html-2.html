@@ -85,7 +85,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;a&gt;</code> avec <code>href="https://kodoway.com"</code> et le texte <strong>Visiter Kodoway</strong>.</p>
+      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;a&gt;</code> avec <code>href="https://google.com"</code> et le texte <strong>Visiter Google</strong>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -122,9 +122,9 @@
   window.exerciceActuel = {
     type: 'html',
     exemple: '<a href="https://kodoway.com">Visiter Kodoway</a><br><br><img src="chat.jpg" width="200" alt="Un chat noir">',
-    motif: /<a[^>]*href\s*=\s*["']https?:\/\/(www\.)?kodoway\.com\/?["'][^>]*>\s*visiter\s+kodoway\s*<\/a>/,
-    succes: '✅ Bravo, c\'est correct !',
-    erreur: '❌ Pas encore... vérifie le href et le texte du lien.'
+    motif: /<a[^>]*href\s*=\s*["']https?:\/\/(www\.)?google\.com\/?["'][^>]*>\s*visiter\s+google\s*<\/a>/,
+succes: '✅ Bravo, c\'est correct !',
+erreur: '❌ Pas encore... vérifie le href et le texte du lien.'
   };
 </script>
 <script src="script.js" defer></script>

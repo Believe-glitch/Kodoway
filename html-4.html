@@ -86,7 +86,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;input&gt;</code> avec <code>type="text"</code>.</p>
+      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;input&gt;</code> avec <code>type="email"</code>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -123,9 +123,9 @@
   window.exerciceActuel = {
     type: 'html',
     exemple: '<label>Ton pr\u00e9nom</label><br><input type="text" placeholder="Ex : L\u00e9a"><br><br><button type="submit">Envoyer</button>',
-    motif: /<input[^>]*type\s*=\s*["']text["'][^>]*>/,
-    succes: '✅ Bravo, c\'est correct !',
-    erreur: '❌ Pas encore... vérifie que ton input a bien type="text".'
+   motif: /<input[^>]*type\s*=\s*["']email["'][^>]*>/,
+succes: '✅ Bravo, c\'est correct !',
+erreur: '❌ Pas encore... vérifie que ton input a bien type="email".'
   };
 </script>
 <script src="script.js" defer></script>

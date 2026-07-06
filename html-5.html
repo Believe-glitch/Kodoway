@@ -88,7 +88,7 @@
 
     <div class="bloc-exercice" id="exercice">
       <p class="bloc-exercice-titre">🧪 À toi de jouer</p>
-      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;footer&gt;</code> qui contient le texte <strong>Mon site</strong>.</p>
+      <p class="bloc-exercice-consignes">Écris une balise <code>&lt;header&gt;</code> qui contient le texte <strong>Kodoway</strong>.</p>
       <textarea id="zoneCode" spellcheck="false" placeholder="Écris ton code ici..."></textarea>
       <div class="bloc-exercice-actions">
         <button class="bouton bouton-principal" id="boutonVerifier">Voir le résultat</button>
@@ -125,9 +125,9 @@
   window.exerciceActuel = {
     type: 'html',
     exemple: '<header>Mon site</header><main><h1>Bienvenue</h1></main><footer>Mon site</footer>',
-    motif: /<footer[^>]*>\s*mon\s+site\s*<\/footer>/,
-    succes: '✅ Bravo, tu as terminé le cours HTML !',
-    erreur: '❌ Pas encore... vérifie ta balise <footer>.'
+   motif: /<header[^>]*>\s*kodoway\s*<\/header>/,
+succes: '✅ Bravo, tu as terminé le cours HTML !',
+erreur: '❌ Pas encore... vérifie ta balise <header>.'
   };
 </script>
 <script src="script.js" defer></script>
