@@ -2,14 +2,15 @@
    Thème sombre bleu/noir, police Inter pour le texte et JetBrains Mono pour le code */
 
 :root {
-  --fond: #0A0F1C;
-  --fond-doux: #111A2E;
-  --fond-carte: #16213A;
+  :root {
+  --fond: #111827;
+  --fond-doux: #1A2333;
+  --fond-carte: #202C43;
   --bleu: #4C7DFF;
   --bleu-fonce: #2952FF;
   --bleu-pale: rgba(76, 125, 255, 0.15);
   --texte: #E9EDF7;
-  --texte-doux: #8B96B4;
+  --texte-doux: #A7B3CF;
   --bordure: #232D45;
 
   --arrondi-petit: 8px;
